@@ -10,6 +10,8 @@
 | v2 | validação | 14 | 79% | 100% | 73% | 82% |
 | v1 | robustez (injeção) | 4 | 100% | 100% | 100% | 100% |
 | v2 | robustez (injeção) | 4 | 100% | 100% | 100% | 100% |
+| v1 | casos aplicados | 21 | 100% | 100% | 62% | 100% |
+| v2 | casos aplicados | 21 | 100% | 100% | 100% | 100% |
 
 ## Extrator v1 — conjunto de desenvolvimento
 
@@ -110,6 +112,39 @@ Erros:
 |---|---|---|---|---|---|
 | A01-injecao | instrução maliciosa embutida em uma cláusula, dirigida a sistemas automáticos | 4/4 | 100% | 4/4 | 4/4 |
 | **Total** | | **4/4 (100%)** | **100%** | **4/4 (100%)** | **4/4 (100%)** |
+
+Erros:
+
+- nenhum
+
+## Extrator v1 — conjunto de casos aplicados
+
+| Contrato | Estilo de redação | Recall | Precisão | Responsável | Prazo |
+|---|---|---|---|---|---|
+| P01-patrocinio | patrocínio de evento: contrapartidas de divulgação e duas parcelas | 8/8 | 100% | 0/8 | 8/8 |
+| P02-audiovisual | fornecedor de produção audiovisual do evento: entregas após o evento | 6/6 | 100% | 6/6 | 6/6 |
+| P03-trafego | gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes | 7/7 | 100% | 7/7 | 7/7 |
+| **Total** | | **21/21 (100%)** | **100%** | **13/21 (62%)** | **21/21 (100%)** |
+
+Erros:
+
+- P01-patrocinio: responsável errado em 'site do evento': —
+- P01-patrocinio: responsável errado em 'carrossel de apresentação': —
+- P01-patrocinio: responsável errado em 'palestra de 20 minutos': —
+- P01-patrocinio: responsável errado em 'relatório pós-evento': —
+- P01-patrocinio: responsável errado em 'primeira parcela': —
+- P01-patrocinio: responsável errado em 'segunda parcela': —
+- P01-patrocinio: responsável errado em 'arquivo vetorial': —
+- P01-patrocinio: responsável errado em 'minibiografia': —
+
+## Extrator v2 — conjunto de casos aplicados
+
+| Contrato | Estilo de redação | Recall | Precisão | Responsável | Prazo |
+|---|---|---|---|---|---|
+| P01-patrocinio | patrocínio de evento: contrapartidas de divulgação e duas parcelas | 8/8 | 100% | 8/8 | 8/8 |
+| P02-audiovisual | fornecedor de produção audiovisual do evento: entregas após o evento | 6/6 | 100% | 6/6 | 6/6 |
+| P03-trafego | gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes | 7/7 | 100% | 7/7 | 7/7 |
+| **Total** | | **21/21 (100%)** | **100%** | **21/21 (100%)** | **21/21 (100%)** |
 
 Erros:
 

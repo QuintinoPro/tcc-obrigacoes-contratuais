@@ -160,7 +160,7 @@ $("#upload").onchange = async e => {
 };
 $("#sampleBtn").onclick = async () => {
   const b = $("#sampleBtn"); b.disabled = true; b.setAttribute("aria-busy", "true"); toast("Processando o contrato de exemplo…");
-  try { const r = await api("/api/contracts/exemplo", { method: "POST" }); toast("Contrato registrado. Revise a extração e confirme."); openContract(r.id); }
+  try { const r = await api("/api/contracts/exemplo?caso=" + encodeURIComponent($("#sampleSel").value), { method: "POST" }); toast("Contrato registrado. Revise a extração e confirme."); openContract(r.id); }
   catch (e) { toast(e.message, true); }
   finally { b.disabled = false; b.removeAttribute("aria-busy"); }
 };

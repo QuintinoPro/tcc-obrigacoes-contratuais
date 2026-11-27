@@ -1,0 +1,112 @@
+{
+  "contrato": "P02-audiovisual",
+  "repeticao": 1,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T03:59:40+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 6.2,
+  "custo_informado_usd": 0.014791900000000002,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1362,
+    "cache_read_input_tokens": 566,
+    "output_tokens": 910,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1362,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 910,
+        "cache_read_input_tokens": 566,
+        "cache_creation_input_tokens": 1362,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1362
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Rio Conferências de Tecnologia Ltda.\", \"contratada\": \"Sigma Filmes e Conteúdo Ltda.\", \"data_assinatura\": \"2027-06-02\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"A CONTRATADA deverá entregar o aftermovie principal do evento, com até 3 minutos, até 20/09/2027, mediante link de download do arquivo final.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Aftermovie principal do evento, com até 3 minutos\", \"prazo\": \"2027-09-20\", \"evidencia_esperada\": \"Link de download do arquivo final\", \"confianca\": 0.97}, {\"clausula\": \"2.2\", \"descricao\": \"A CONTRATADA deverá entregar os quatro vídeos dos eventos paralelos até 20/09/2027.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Quatro vídeos dos eventos paralelos\", \"prazo\": \"2027-09-20\", \"evidencia_esperada\": \"\", \"confianca\": 0.95}, {\"clausula\": \"2.3\", \"descricao\": \"A CONTRATADA deverá entregar 30 cortes verticais das palestras do palco principal até 30/09/2027.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"30 cortes verticais das palestras do palco principal\", \"prazo\": \"2027-09-30\", \"evidencia_esperada\": \"\", \"confianca\": 0.95}, {\"clausula\": \"3.1\", \"descricao\": \"A CONTRATANTE deverá emitir as credenciais de acesso da equipe de filmagem até 05/08/2027.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Credenciais de acesso da equipe de filmagem\", \"prazo\": \"2027-08-05\", \"evidencia_esperada\": \"\", \"confianca\": 0.95}, {\"clausula\": \"3.2\", \"descricao\": \"A CONTRATANTE deverá enviar a programação final dos palcos até 01/08/2027.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Programação final dos palcos\", \"prazo\": \"2027-08-01\", \"evidencia_esperada\": \"\", \"confianca\": 0.95}, {\"clausula\": \"3.3\", \"descricao\": \"A CONTRATANTE obriga-se a pagar o saldo de 50% do valor em até 10 dias após a aprovação do aftermovie.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Pagamento do saldo de 50% do valor\", \"prazo\": null, \"evidencia_esperada\": \"\", \"confianca\": 0.9}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Rio Conferências de Tecnologia Ltda.",
+    "contratada": "Sigma Filmes e Conteúdo Ltda.",
+    "data_assinatura": "2027-06-02",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A CONTRATADA deverá entregar o aftermovie principal do evento, com até 3 minutos, até 20/09/2027, mediante link de download do arquivo final.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Aftermovie principal do evento, com até 3 minutos",
+        "prazo": "2027-09-20",
+        "evidencia_esperada": "Link de download do arquivo final",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "A CONTRATADA deverá entregar os quatro vídeos dos eventos paralelos até 20/09/2027.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Quatro vídeos dos eventos paralelos",
+        "prazo": "2027-09-20",
+        "evidencia_esperada": "",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "A CONTRATADA deverá entregar 30 cortes verticais das palestras do palco principal até 30/09/2027.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "30 cortes verticais das palestras do palco principal",
+        "prazo": "2027-09-30",
+        "evidencia_esperada": "",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.1",
+        "descricao": "A CONTRATANTE deverá emitir as credenciais de acesso da equipe de filmagem até 05/08/2027.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Credenciais de acesso da equipe de filmagem",
+        "prazo": "2027-08-05",
+        "evidencia_esperada": "",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.2",
+        "descricao": "A CONTRATANTE deverá enviar a programação final dos palcos até 01/08/2027.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Programação final dos palcos",
+        "prazo": "2027-08-01",
+        "evidencia_esperada": "",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.3",
+        "descricao": "A CONTRATANTE obriga-se a pagar o saldo de 50% do valor em até 10 dias após a aprovação do aftermovie.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Pagamento do saldo de 50% do valor",
+        "prazo": null,
+        "evidencia_esperada": "",
+        "confianca": 0.9
+      }
+    ]
+  }
+}

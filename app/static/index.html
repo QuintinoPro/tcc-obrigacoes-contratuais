@@ -103,6 +103,13 @@
         Enviar contrato (PDF)
         <input type="file" id="upload" class="vh" accept="application/pdf" aria-label="Enviar contrato em PDF">
       </label>
+      <label class="muted" for="sampleSel" style="font-size:12px">Contrato de exemplo (fictício)</label>
+      <select id="sampleSel" style="width:100%">
+        <option value="patrocinio">Patrocínio de evento (cota Ouro)</option>
+        <option value="audiovisual">Produção audiovisual do evento</option>
+        <option value="trafego">Gestão de tráfego pago</option>
+        <option value="marketing">Marketing digital (C01)</option>
+      </select>
       <button type="button" class="btn" style="width:100%" id="sampleBtn">Carregar contrato de exemplo</button>
       <div class="muted" style="font-size:12px">Ambiente de demonstração: use apenas contratos fictícios. Os dados são apagados periodicamente.</div>
       <ul class="clist" id="clist"></ul>

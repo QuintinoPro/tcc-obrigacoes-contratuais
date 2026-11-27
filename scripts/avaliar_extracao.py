@@ -15,7 +15,7 @@ from pathlib import Path
 from pypdf import PdfReader
 
 from app import extractor, extractor_v1
-from samples.corpus import ADVERSARIAL, CORPUS, HOLDOUT
+from samples.corpus import ADVERSARIAL, CASOS, CORPUS, HOLDOUT
 from samples.gerar_contrato_exemplo import gerar
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -80,7 +80,7 @@ def tabela(res: list[dict]) -> tuple[str, dict]:
 
 def main():
     OUT_PDF.mkdir(exist_ok=True)
-    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT, "robustez (injeção)": ADVERSARIAL}
+    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT, "robustez (injeção)": ADVERSARIAL, "casos aplicados": CASOS}
     md, dump, resumo = [], {}, ["| Versão | Conjunto | Obrigações | Recall | Precisão | Responsável | Prazo |", "|---|---|---|---|---|---|---|"]
     for nome_c, conj in conjuntos.items():
         for v, fn in VERSOES.items():

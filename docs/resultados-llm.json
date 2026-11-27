@@ -484,5 +484,167 @@
         }
       ]
     ]
+  },
+  "casos aplicados": {
+    "repeticoes": [
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 21,
+        "detectadas": 21,
+        "falsos_positivos": 0,
+        "responsavel_ok": 21,
+        "prazo_ok": 21
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 0.9545454545454546,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 21,
+        "detectadas": 21,
+        "falsos_positivos": 1,
+        "responsavel_ok": 21,
+        "prazo_ok": 21
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 21,
+        "detectadas": 21,
+        "falsos_positivos": 0,
+        "responsavel_ok": 21,
+        "prazo_ok": 21
+      }
+    ],
+    "contratos": [
+      [
+        {
+          "id": "P01-patrocinio",
+          "estilo": "patrocínio de evento: contrapartidas de divulgação e duas parcelas",
+          "gabarito": 8,
+          "extraidas": 8,
+          "detectadas": 8,
+          "falsos_positivos": 0,
+          "responsavel_ok": 8,
+          "prazo_ok": 8,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "P02-audiovisual",
+          "estilo": "fornecedor de produção audiovisual do evento: entregas após o evento",
+          "gabarito": 6,
+          "extraidas": 6,
+          "detectadas": 6,
+          "falsos_positivos": 0,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "P03-trafego",
+          "estilo": "gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        }
+      ],
+      [
+        {
+          "id": "P01-patrocinio",
+          "estilo": "patrocínio de evento: contrapartidas de divulgação e duas parcelas",
+          "gabarito": 8,
+          "extraidas": 9,
+          "detectadas": 8,
+          "falsos_positivos": 1,
+          "responsavel_ok": 8,
+          "prazo_ok": 8,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "P02-audiovisual",
+          "estilo": "fornecedor de produção audiovisual do evento: entregas após o evento",
+          "gabarito": 6,
+          "extraidas": 6,
+          "detectadas": 6,
+          "falsos_positivos": 0,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "P03-trafego",
+          "estilo": "gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        }
+      ],
+      [
+        {
+          "id": "P01-patrocinio",
+          "estilo": "patrocínio de evento: contrapartidas de divulgação e duas parcelas",
+          "gabarito": 8,
+          "extraidas": 8,
+          "detectadas": 8,
+          "falsos_positivos": 0,
+          "responsavel_ok": 8,
+          "prazo_ok": 8,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "P02-audiovisual",
+          "estilo": "fornecedor de produção audiovisual do evento: entregas após o evento",
+          "gabarito": 6,
+          "extraidas": 6,
+          "detectadas": 6,
+          "falsos_positivos": 0,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "P03-trafego",
+          "estilo": "gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        }
+      ]
+    ]
   }
 }

@@ -325,5 +325,110 @@
         "erros": []
       }
     ]
+  },
+  "v1-casos aplicados": {
+    "total": {
+      "gabarito": 21,
+      "extraidas": 21,
+      "detectadas": 21,
+      "falsos_positivos": 0,
+      "responsavel_ok": 13,
+      "prazo_ok": 21
+    },
+    "contratos": [
+      {
+        "id": "P01-patrocinio",
+        "estilo": "patrocínio de evento: contrapartidas de divulgação e duas parcelas",
+        "gabarito": 8,
+        "extraidas": 8,
+        "detectadas": 8,
+        "falsos_positivos": 0,
+        "responsavel_ok": 0,
+        "prazo_ok": 8,
+        "provedor": "regras",
+        "erros": [
+          "responsável errado em 'site do evento': —",
+          "responsável errado em 'carrossel de apresentação': —",
+          "responsável errado em 'palestra de 20 minutos': —",
+          "responsável errado em 'relatório pós-evento': —",
+          "responsável errado em 'primeira parcela': —",
+          "responsável errado em 'segunda parcela': —",
+          "responsável errado em 'arquivo vetorial': —",
+          "responsável errado em 'minibiografia': —"
+        ]
+      },
+      {
+        "id": "P02-audiovisual",
+        "estilo": "fornecedor de produção audiovisual do evento: entregas após o evento",
+        "gabarito": 6,
+        "extraidas": 6,
+        "detectadas": 6,
+        "falsos_positivos": 0,
+        "responsavel_ok": 6,
+        "prazo_ok": 6,
+        "provedor": "regras",
+        "erros": []
+      },
+      {
+        "id": "P03-trafego",
+        "estilo": "gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes",
+        "gabarito": 7,
+        "extraidas": 7,
+        "detectadas": 7,
+        "falsos_positivos": 0,
+        "responsavel_ok": 7,
+        "prazo_ok": 7,
+        "provedor": "regras",
+        "erros": []
+      }
+    ]
+  },
+  "v2-casos aplicados": {
+    "total": {
+      "gabarito": 21,
+      "extraidas": 21,
+      "detectadas": 21,
+      "falsos_positivos": 0,
+      "responsavel_ok": 21,
+      "prazo_ok": 21
+    },
+    "contratos": [
+      {
+        "id": "P01-patrocinio",
+        "estilo": "patrocínio de evento: contrapartidas de divulgação e duas parcelas",
+        "gabarito": 8,
+        "extraidas": 8,
+        "detectadas": 8,
+        "falsos_positivos": 0,
+        "responsavel_ok": 8,
+        "prazo_ok": 8,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "P02-audiovisual",
+        "estilo": "fornecedor de produção audiovisual do evento: entregas após o evento",
+        "gabarito": 6,
+        "extraidas": 6,
+        "detectadas": 6,
+        "falsos_positivos": 0,
+        "responsavel_ok": 6,
+        "prazo_ok": 6,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "P03-trafego",
+        "estilo": "gestão de tráfego pago: obrigações do cliente (acessos, verba) e entregas recorrentes",
+        "gabarito": 7,
+        "extraidas": 7,
+        "detectadas": 7,
+        "falsos_positivos": 0,
+        "responsavel_ok": 7,
+        "prazo_ok": 7,
+        "provedor": "regras-v2",
+        "erros": []
+      }
+    ]
   }
 }

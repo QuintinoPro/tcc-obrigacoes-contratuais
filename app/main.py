@@ -219,10 +219,27 @@ def create_app(data_dir: Path | None = None) -> FastAPI:
                         usuario: str = Form("operador", max_length=60)):
         return ingest(read_upload(arquivo), arquivo.filename or "contrato.pdf", titulo, usuario)
 
+    EXEMPLOS = {  # caso -> (id no corpus, título exibido)
+        "patrocinio": ("P01-patrocinio", "Patrocínio de evento · cota Ouro (fictício)"),
+        "audiovisual": ("P02-audiovisual", "Produção audiovisual do evento (fictício)"),
+        "trafego": ("P03-trafego", "Gestão de tráfego pago (fictício)"),
+    }
+
     @app.post("/api/contracts/exemplo")
-    def upload_sample():
+    def upload_sample(caso: str = "marketing"):
+        from samples.gerar_contrato_exemplo import gerar
+        if caso in EXEMPLOS:
+            from samples.corpus import CASOS
+            cid, titulo = EXEMPLOS[caso]
+            item = next(c for c in CASOS if c["id"] == cid)
+            pdf = SAMPLE.parent / "casos" / f"{cid}.pdf"
+            if not pdf.exists():
+                pdf.parent.mkdir(parents=True, exist_ok=True)
+                gerar(pdf, item["texto"])
+            return ingest(pdf.read_bytes(), pdf.name, titulo, "operador")
+        if caso != "marketing":
+            raise HTTPException(400, "Exemplo inexistente")
         if not SAMPLE.exists():
-            from samples.gerar_contrato_exemplo import gerar
             gerar(SAMPLE)
         return ingest(SAMPLE.read_bytes(), SAMPLE.name, "Contrato 014/2026 — Marketing Digital (fictício)", "operador")
 

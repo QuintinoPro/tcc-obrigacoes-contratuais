@@ -1,0 +1,121 @@
+{
+  "contrato": "P03-trafego",
+  "repeticao": 3,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T03:59:49+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 8.5,
+  "custo_informado_usd": 0.016101,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 652,
+    "cache_read_input_tokens": 1321,
+    "output_tokens": 1317,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 652,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1317,
+        "cache_read_input_tokens": 1321,
+        "cache_creation_input_tokens": 652,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 652
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Volt Scooters Elétricas Ltda.\", \"contratada\": \"Tau Mídia Digital Ltda.\", \"data_assinatura\": \"2026-12-01\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"A CONTRATANTE deverá conceder à CONTRATADA acesso de administrador à conta de anúncios e ao gerenciador de negócios em até 3 dias contados da assinatura.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Acesso de administrador à conta de anúncios e ao gerenciador de negócios\", \"prazo\": \"2026-12-04\", \"evidencia_esperada\": \"Comprovante de concessão de acesso de administrador (print ou e-mail de convite aceito) à conta de anúncios e ao gerenciador de negócios\", \"confianca\": 0.95}, {\"clausula\": \"2.2\", \"descricao\": \"A CONTRATANTE deverá responder ao formulário de briefing até 05/12/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Formulário de briefing respondido\", \"prazo\": \"2026-12-05\", \"evidencia_esperada\": \"Formulário de briefing preenchido e enviado à CONTRATADA\", \"confianca\": 0.98}, {\"clausula\": \"2.3\", \"descricao\": \"A CONTRATANTE deverá manter verba mínima de mídia de R$ 3.000,00 por mês no cartão cadastrado na conta de anúncios.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Verba mínima de mídia de R$ 3.000,00 mensais disponível no cartão cadastrado\", \"prazo\": null, \"evidencia_esperada\": \"Extrato ou registro de faturamento da conta de anúncios demonstrando verba mínima de R$ 3.000,00 por mês\", \"confianca\": 0.9}, {\"clausula\": \"2.4\", \"descricao\": \"A CONTRATANTE deverá aprovar ou pedir ajustes nos criativos em até 2 dias úteis após cada envio.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Aprovação ou solicitação de ajustes dos criativos\", \"prazo\": null, \"evidencia_esperada\": \"Mensagem ou registro de aprovação/pedido de ajustes enviado em até 2 dias úteis após cada envio de criativos\", \"confianca\": 0.92}, {\"clausula\": \"3.1\", \"descricao\": \"A CONTRATADA deverá estruturar as campanhas de geração de leads no Meta Ads em até 10 dias contados da assinatura.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Campanhas de geração de leads estruturadas no Meta Ads\", \"prazo\": \"2026-12-11\", \"evidencia_esperada\": \"Campanhas de geração de leads criadas e configuradas no gerenciador do Meta Ads\", \"confianca\": 0.95}, {\"clausula\": \"3.2\", \"descricao\": \"A CONTRATADA deverá entregar oito criativos por mês para aprovação da CONTRATANTE.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Oito criativos mensais\", \"prazo\": null, \"evidencia_esperada\": \"Envio mensal de oito criativos à CONTRATANTE para aprovação\", \"confianca\": 0.93}, {\"clausula\": \"3.3\", \"descricao\": \"A CONTRATADA deverá enviar o relatório mensal de resultados até o quinto dia útil de cada mês.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Relatório mensal de resultados\", \"prazo\": null, \"evidencia_esperada\": \"Relatório mensal de resultados enviado à CONTRATANTE até o quinto dia útil de cada mês\", \"confianca\": 0.93}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Volt Scooters Elétricas Ltda.",
+    "contratada": "Tau Mídia Digital Ltda.",
+    "data_assinatura": "2026-12-01",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A CONTRATANTE deverá conceder à CONTRATADA acesso de administrador à conta de anúncios e ao gerenciador de negócios em até 3 dias contados da assinatura.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Acesso de administrador à conta de anúncios e ao gerenciador de negócios",
+        "prazo": "2026-12-04",
+        "evidencia_esperada": "Comprovante de concessão de acesso de administrador (print ou e-mail de convite aceito) à conta de anúncios e ao gerenciador de negócios",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "A CONTRATANTE deverá responder ao formulário de briefing até 05/12/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Formulário de briefing respondido",
+        "prazo": "2026-12-05",
+        "evidencia_esperada": "Formulário de briefing preenchido e enviado à CONTRATADA",
+        "confianca": 0.98
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "A CONTRATANTE deverá manter verba mínima de mídia de R$ 3.000,00 por mês no cartão cadastrado na conta de anúncios.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Verba mínima de mídia de R$ 3.000,00 mensais disponível no cartão cadastrado",
+        "prazo": null,
+        "evidencia_esperada": "Extrato ou registro de faturamento da conta de anúncios demonstrando verba mínima de R$ 3.000,00 por mês",
+        "confianca": 0.9
+      },
+      {
+        "clausula": "2.4",
+        "descricao": "A CONTRATANTE deverá aprovar ou pedir ajustes nos criativos em até 2 dias úteis após cada envio.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Aprovação ou solicitação de ajustes dos criativos",
+        "prazo": null,
+        "evidencia_esperada": "Mensagem ou registro de aprovação/pedido de ajustes enviado em até 2 dias úteis após cada envio de criativos",
+        "confianca": 0.92
+      },
+      {
+        "clausula": "3.1",
+        "descricao": "A CONTRATADA deverá estruturar as campanhas de geração de leads no Meta Ads em até 10 dias contados da assinatura.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Campanhas de geração de leads estruturadas no Meta Ads",
+        "prazo": "2026-12-11",
+        "evidencia_esperada": "Campanhas de geração de leads criadas e configuradas no gerenciador do Meta Ads",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.2",
+        "descricao": "A CONTRATADA deverá entregar oito criativos por mês para aprovação da CONTRATANTE.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Oito criativos mensais",
+        "prazo": null,
+        "evidencia_esperada": "Envio mensal de oito criativos à CONTRATANTE para aprovação",
+        "confianca": 0.93
+      },
+      {
+        "clausula": "3.3",
+        "descricao": "A CONTRATADA deverá enviar o relatório mensal de resultados até o quinto dia útil de cada mês.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Relatório mensal de resultados",
+        "prazo": null,
+        "evidencia_esperada": "Relatório mensal de resultados enviado à CONTRATANTE até o quinto dia útil de cada mês",
+        "confianca": 0.93
+      }
+    ]
+  }
+}

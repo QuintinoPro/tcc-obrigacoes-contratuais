@@ -61,6 +61,14 @@ def test_c1_extracao(contrato):
     assert acertos_prazo == len(GABARITO)
 
 
+def test_c1b_exemplo_patrocinio(client):
+    r = client.post("/api/contracts/exemplo?caso=patrocinio")
+    assert r.status_code == 200
+    sug = r.json()["sugestao"]
+    assert len(sug["obrigacoes"]) == 8
+    assert {o["responsavel"] for o in sug["obrigacoes"]} == {"CONTRATANTE", "CONTRATADA"}
+
+
 def test_c2_ciclo_completo(client, contrato):
     det = confirmar(client, contrato)
     assert len(det["obrigacoes"]) == len(GABARITO)
@@ -158,6 +166,7 @@ def test_c8_evidencia_verificada_na_chain(client, contrato):
 
 def test_c9_entradas_invalidas(client, contrato):
     assert client.post("/api/contracts", files={"arquivo": ("x.pdf", io.BytesIO(b"<html>nao sou pdf</html>"))}).status_code == 415
+    assert client.post("/api/contracts/exemplo?caso=inexistente").status_code == 400
     novo = client.post("/api/contracts/exemplo").json()
     base = {"usuario": "r", "contratante": "A", "contratada": "B"}
     ob = {"descricao": "x", "responsavel": "CONTRATADA"}

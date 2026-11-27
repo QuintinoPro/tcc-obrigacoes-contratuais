@@ -1,0 +1,9 @@
+fastapi==0.165.0
+uvicorn[standard]==0.54.0
+python-multipart==0.0.34
+pypdf==7.2.0
+web3[tester]==8.0.0
+py-solc-x==2.1.0
+reportlab==5.1.2
+pytest==9.2.0
+httpx==0.29.0

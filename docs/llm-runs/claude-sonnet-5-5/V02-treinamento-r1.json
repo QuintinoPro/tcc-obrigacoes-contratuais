@@ -1,0 +1,103 @@
+{
+  "contrato": "V02-treinamento",
+  "repeticao": 1,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:55+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 6.6,
+  "custo_informado_usd": 0.0106366,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 651,
+    "cache_read_input_tokens": 1124,
+    "output_tokens": 775,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 651,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 775,
+        "cache_read_input_tokens": 1124,
+        "cache_creation_input_tokens": 651,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 651
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Nu Seguros S.A.\", \"contratada\": \"João Exemplo da Silva\", \"data_assinatura\": \"2026-09-20\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"O CONTRATADO deverá ministrar 4 turmas do curso de atendimento ao cliente até 15/12/2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"4 turmas do curso de atendimento ao cliente ministradas\", \"prazo\": \"2026-12-15\", \"evidencia_esperada\": \"Registros de realização das 4 turmas (listas de presença)\", \"confianca\": 0.95}, {\"clausula\": \"2.2\", \"descricao\": \"O CONTRATADO deverá entregar o material didático até 10.10.2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Material didático\", \"prazo\": \"2026-10-10\", \"evidencia_esperada\": \"Material didático entregue com comprovante de recebimento\", \"confianca\": 0.9}, {\"clausula\": \"2.3\", \"descricao\": \"O CONTRATADO deverá aplicar avaliação de reação ao final de cada turma, mediante formulário preenchido pelos participantes.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Avaliação de reação aplicada ao final de cada turma\", \"prazo\": null, \"evidencia_esperada\": \"Formulários de avaliação de reação preenchidos pelos participantes\", \"confianca\": 0.9}, {\"clausula\": \"2.4\", \"descricao\": \"A CONTRATANTE deverá reservar sala com projetor para cada turma.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Sala com projetor reservada para cada turma\", \"prazo\": null, \"evidencia_esperada\": \"Confirmação de reserva de sala com projetor\", \"confianca\": 0.85}, {\"clausula\": \"2.5\", \"descricao\": \"A CONTRATANTE deverá enviar a lista de participantes até 05/10/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Lista de participantes\", \"prazo\": \"2026-10-05\", \"evidencia_esperada\": \"Lista de participantes enviada com registro de envio\", \"confianca\": 0.95}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Nu Seguros S.A.",
+    "contratada": "João Exemplo da Silva",
+    "data_assinatura": "2026-09-20",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "O CONTRATADO deverá ministrar 4 turmas do curso de atendimento ao cliente até 15/12/2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "4 turmas do curso de atendimento ao cliente ministradas",
+        "prazo": "2026-12-15",
+        "evidencia_esperada": "Registros de realização das 4 turmas (listas de presença)",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "O CONTRATADO deverá entregar o material didático até 10.10.2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Material didático",
+        "prazo": "2026-10-10",
+        "evidencia_esperada": "Material didático entregue com comprovante de recebimento",
+        "confianca": 0.9
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "O CONTRATADO deverá aplicar avaliação de reação ao final de cada turma, mediante formulário preenchido pelos participantes.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Avaliação de reação aplicada ao final de cada turma",
+        "prazo": null,
+        "evidencia_esperada": "Formulários de avaliação de reação preenchidos pelos participantes",
+        "confianca": 0.9
+      },
+      {
+        "clausula": "2.4",
+        "descricao": "A CONTRATANTE deverá reservar sala com projetor para cada turma.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Sala com projetor reservada para cada turma",
+        "prazo": null,
+        "evidencia_esperada": "Confirmação de reserva de sala com projetor",
+        "confianca": 0.85
+      },
+      {
+        "clausula": "2.5",
+        "descricao": "A CONTRATANTE deverá enviar a lista de participantes até 05/10/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Lista de participantes",
+        "prazo": "2026-10-05",
+        "evidencia_esperada": "Lista de participantes enviada com registro de envio",
+        "confianca": 0.95
+      }
+    ]
+  }
+}

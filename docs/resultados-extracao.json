@@ -1,0 +1,281 @@
+{
+  "v1-desenvolvimento": {
+    "total": {
+      "gabarito": 28,
+      "extraidas": 21,
+      "detectadas": 21,
+      "falsos_positivos": 0,
+      "responsavel_ok": 17,
+      "prazo_ok": 20
+    },
+    "contratos": [
+      {
+        "id": "C01-marketing",
+        "estilo": "padronizado: itens numerados, verbo 'deverá', datas dd/mm/aaaa",
+        "gabarito": 7,
+        "extraidas": 7,
+        "detectadas": 7,
+        "falsos_positivos": 0,
+        "responsavel_ok": 7,
+        "prazo_ok": 7,
+        "provedor": "regras",
+        "erros": []
+      },
+      {
+        "id": "C02-software",
+        "estilo": "padronizado com verbos variados ('se obriga a', 'compromete-se a', 'caberá à')",
+        "gabarito": 6,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 4,
+        "prazo_ok": 4,
+        "provedor": "regras",
+        "erros": [
+          "não detectada: documento de requisitos",
+          "não detectada: defeitos críticos"
+        ]
+      },
+      {
+        "id": "C03-limpeza",
+        "estilo": "datas por extenso e prazos relativos à assinatura",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 5,
+        "prazo_ok": 4,
+        "provedor": "regras",
+        "erros": [
+          "prazo errado em 'plano de higienização': None (esperado 2026-09-30)"
+        ]
+      },
+      {
+        "id": "C04-consultoria",
+        "estilo": "partes com outros nomes (PRESTADORA/CLIENTE) e voz passiva",
+        "gabarito": 5,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 0,
+        "prazo_ok": 4,
+        "provedor": "regras",
+        "erros": [
+          "responsável errado em 'diagnóstico organizacional': —",
+          "não detectada: plano de ação",
+          "responsável errado em 'três oficinas': —",
+          "responsável errado em 'dados financeiros': —",
+          "responsável errado em 'presença dos diretores': —"
+        ]
+      },
+      {
+        "id": "C05-eventos",
+        "estilo": "obrigações em alíneas sem numeração própria e texto corrido",
+        "gabarito": 5,
+        "extraidas": 1,
+        "detectadas": 1,
+        "falsos_positivos": 0,
+        "responsavel_ok": 1,
+        "prazo_ok": 1,
+        "provedor": "regras",
+        "erros": [
+          "não detectada: local do evento",
+          "não detectada: buffet",
+          "não detectada: relatório de público",
+          "não detectada: pagamento do sinal"
+        ]
+      }
+    ]
+  },
+  "v2-desenvolvimento": {
+    "total": {
+      "gabarito": 28,
+      "extraidas": 28,
+      "detectadas": 28,
+      "falsos_positivos": 0,
+      "responsavel_ok": 28,
+      "prazo_ok": 28
+    },
+    "contratos": [
+      {
+        "id": "C01-marketing",
+        "estilo": "padronizado: itens numerados, verbo 'deverá', datas dd/mm/aaaa",
+        "gabarito": 7,
+        "extraidas": 7,
+        "detectadas": 7,
+        "falsos_positivos": 0,
+        "responsavel_ok": 7,
+        "prazo_ok": 7,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "C02-software",
+        "estilo": "padronizado com verbos variados ('se obriga a', 'compromete-se a', 'caberá à')",
+        "gabarito": 6,
+        "extraidas": 6,
+        "detectadas": 6,
+        "falsos_positivos": 0,
+        "responsavel_ok": 6,
+        "prazo_ok": 6,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "C03-limpeza",
+        "estilo": "datas por extenso e prazos relativos à assinatura",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 5,
+        "prazo_ok": 5,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "C04-consultoria",
+        "estilo": "partes com outros nomes (PRESTADORA/CLIENTE) e voz passiva",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 5,
+        "prazo_ok": 5,
+        "provedor": "regras-v2",
+        "erros": []
+      },
+      {
+        "id": "C05-eventos",
+        "estilo": "obrigações em alíneas sem numeração própria e texto corrido",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 5,
+        "prazo_ok": 5,
+        "provedor": "regras-v2",
+        "erros": []
+      }
+    ]
+  },
+  "v1-validação": {
+    "total": {
+      "gabarito": 14,
+      "extraidas": 11,
+      "detectadas": 11,
+      "falsos_positivos": 0,
+      "responsavel_ok": 8,
+      "prazo_ok": 8
+    },
+    "contratos": [
+      {
+        "id": "V01-manutencao",
+        "estilo": "ordem inversa ('Fica a CONTRATADA obrigada'), 'É responsabilidade da', futuro simples",
+        "gabarito": 5,
+        "extraidas": 2,
+        "detectadas": 2,
+        "falsos_positivos": 0,
+        "responsavel_ok": 2,
+        "prazo_ok": 1,
+        "provedor": "regras",
+        "erros": [
+          "não detectada: vistoria inicial",
+          "prazo errado em 'laudo técnico': None (esperado 2026-11-15)",
+          "não detectada: técnico de plantão",
+          "não detectada: áreas técnicas"
+        ]
+      },
+      {
+        "id": "V02-treinamento",
+        "estilo": "parte no masculino (CONTRATADO), data com pontos (dd.mm.aaaa)",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 2,
+        "prazo_ok": 4,
+        "provedor": "regras",
+        "erros": [
+          "responsável errado em '4 turmas': —",
+          "responsável errado em 'material didático': —",
+          "prazo errado em 'material didático': None (esperado 2026-10-10)",
+          "responsável errado em 'avaliação de reação': —"
+        ]
+      },
+      {
+        "id": "V03-conteudo",
+        "estilo": "redação padronizada com cláusulas sem obrigação misturadas",
+        "gabarito": 4,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 4,
+        "prazo_ok": 3,
+        "provedor": "regras",
+        "erros": [
+          "prazo errado em '50% do valor': None (esperado 2026-11-01)"
+        ]
+      }
+    ]
+  },
+  "v2-validação": {
+    "total": {
+      "gabarito": 14,
+      "extraidas": 11,
+      "detectadas": 11,
+      "falsos_positivos": 0,
+      "responsavel_ok": 8,
+      "prazo_ok": 9
+    },
+    "contratos": [
+      {
+        "id": "V01-manutencao",
+        "estilo": "ordem inversa ('Fica a CONTRATADA obrigada'), 'É responsabilidade da', futuro simples",
+        "gabarito": 5,
+        "extraidas": 2,
+        "detectadas": 2,
+        "falsos_positivos": 0,
+        "responsavel_ok": 2,
+        "prazo_ok": 2,
+        "provedor": "regras-v2",
+        "erros": [
+          "não detectada: vistoria inicial",
+          "não detectada: técnico de plantão",
+          "não detectada: áreas técnicas"
+        ]
+      },
+      {
+        "id": "V02-treinamento",
+        "estilo": "parte no masculino (CONTRATADO), data com pontos (dd.mm.aaaa)",
+        "gabarito": 5,
+        "extraidas": 5,
+        "detectadas": 5,
+        "falsos_positivos": 0,
+        "responsavel_ok": 2,
+        "prazo_ok": 4,
+        "provedor": "regras-v2",
+        "erros": [
+          "responsável errado em '4 turmas': —",
+          "responsável errado em 'material didático': —",
+          "prazo errado em 'material didático': None (esperado 2026-10-10)",
+          "responsável errado em 'avaliação de reação': —"
+        ]
+      },
+      {
+        "id": "V03-conteudo",
+        "estilo": "redação padronizada com cláusulas sem obrigação misturadas",
+        "gabarito": 4,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 4,
+        "prazo_ok": 3,
+        "provedor": "regras-v2",
+        "erros": [
+          "prazo errado em '50% do valor': None (esperado 2026-11-01)"
+        ]
+      }
+    ]
+  }
+}

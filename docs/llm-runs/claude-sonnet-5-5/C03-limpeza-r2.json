@@ -1,0 +1,103 @@
+{
+  "contrato": "C03-limpeza",
+  "repeticao": 2,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:29+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 14.2,
+  "custo_informado_usd": 0.0110734,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 649,
+    "cache_read_input_tokens": 1173,
+    "output_tokens": 818,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 649,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 818,
+        "cache_read_input_tokens": 1173,
+        "cache_creation_input_tokens": 649,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 649
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Épsilon Educação Ltda.\", \"contratada\": \"Zeta Facilities Ltda.\", \"data_assinatura\": \"2026-09-02\", \"obrigacoes\": [{\"clausula\": \"4.1\", \"descricao\": \"A CONTRATADA deverá alocar a equipe de quatro auxiliares de limpeza em até 15 dias contados da assinatura.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Alocação da equipe de quatro auxiliares de limpeza\", \"prazo\": \"2026-09-17\", \"evidencia_esperada\": \"Registro de alocação da equipe de quatro auxiliares de limpeza\", \"confianca\": 0.95}, {\"clausula\": \"4.2\", \"descricao\": \"A CONTRATADA deverá apresentar o plano de higienização até o dia 30 de setembro de 2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Plano de higienização\", \"prazo\": \"2026-09-30\", \"evidencia_esperada\": \"Plano de higienização apresentado\", \"confianca\": 0.98}, {\"clausula\": \"4.3\", \"descricao\": \"A CONTRATADA obriga-se a fornecer os materiais de limpeza mensalmente, mediante nota de entrega assinada.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Materiais de limpeza (fornecimento mensal)\", \"prazo\": null, \"evidencia_esperada\": \"Nota de entrega assinada\", \"confianca\": 0.95}, {\"clausula\": \"4.4\", \"descricao\": \"A CONTRATANTE deverá disponibilizar espaço para guarda dos materiais em até 5 dias contados da assinatura.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Espaço para guarda dos materiais\", \"prazo\": \"2026-09-07\", \"evidencia_esperada\": \"Registro de disponibilização do espaço para guarda dos materiais\", \"confianca\": 0.95}, {\"clausula\": \"4.5\", \"descricao\": \"A CONTRATANTE obriga-se a pagar a fatura mensal até o quinto dia útil de cada mês.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Pagamento da fatura mensal\", \"prazo\": null, \"evidencia_esperada\": \"Comprovante de pagamento da fatura mensal\", \"confianca\": 0.95}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Épsilon Educação Ltda.",
+    "contratada": "Zeta Facilities Ltda.",
+    "data_assinatura": "2026-09-02",
+    "obrigacoes": [
+      {
+        "clausula": "4.1",
+        "descricao": "A CONTRATADA deverá alocar a equipe de quatro auxiliares de limpeza em até 15 dias contados da assinatura.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Alocação da equipe de quatro auxiliares de limpeza",
+        "prazo": "2026-09-17",
+        "evidencia_esperada": "Registro de alocação da equipe de quatro auxiliares de limpeza",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "4.2",
+        "descricao": "A CONTRATADA deverá apresentar o plano de higienização até o dia 30 de setembro de 2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Plano de higienização",
+        "prazo": "2026-09-30",
+        "evidencia_esperada": "Plano de higienização apresentado",
+        "confianca": 0.98
+      },
+      {
+        "clausula": "4.3",
+        "descricao": "A CONTRATADA obriga-se a fornecer os materiais de limpeza mensalmente, mediante nota de entrega assinada.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Materiais de limpeza (fornecimento mensal)",
+        "prazo": null,
+        "evidencia_esperada": "Nota de entrega assinada",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "4.4",
+        "descricao": "A CONTRATANTE deverá disponibilizar espaço para guarda dos materiais em até 5 dias contados da assinatura.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Espaço para guarda dos materiais",
+        "prazo": "2026-09-07",
+        "evidencia_esperada": "Registro de disponibilização do espaço para guarda dos materiais",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "4.5",
+        "descricao": "A CONTRATANTE obriga-se a pagar a fatura mensal até o quinto dia útil de cada mês.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Pagamento da fatura mensal",
+        "prazo": null,
+        "evidencia_esperada": "Comprovante de pagamento da fatura mensal",
+        "confianca": 0.95
+      }
+    ]
+  }
+}

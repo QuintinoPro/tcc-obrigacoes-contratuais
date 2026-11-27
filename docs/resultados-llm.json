@@ -1,0 +1,404 @@
+{
+  "desenvolvimento": {
+    "repeticoes": [
+      {
+        "revocacao": 1.0,
+        "precisao": 0.9655172413793104,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 28,
+        "detectadas": 28,
+        "falsos_positivos": 1,
+        "responsavel_ok": 28,
+        "prazo_ok": 28
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 28,
+        "detectadas": 28,
+        "falsos_positivos": 0,
+        "responsavel_ok": 28,
+        "prazo_ok": 28
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 0.9655172413793104,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 28,
+        "detectadas": 28,
+        "falsos_positivos": 1,
+        "responsavel_ok": 28,
+        "prazo_ok": 28
+      }
+    ],
+    "contratos": [
+      [
+        {
+          "id": "C01-marketing",
+          "estilo": "padronizado: itens numerados, verbo 'deverá', datas dd/mm/aaaa",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "C02-software",
+          "estilo": "padronizado com verbos variados ('se obriga a', 'compromete-se a', 'caberá à')",
+          "gabarito": 6,
+          "extraidas": 7,
+          "detectadas": 6,
+          "falsos_positivos": 1,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "C03-limpeza",
+          "estilo": "datas por extenso e prazos relativos à assinatura",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "C04-consultoria",
+          "estilo": "partes com outros nomes (PRESTADORA/CLIENTE) e voz passiva",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "C05-eventos",
+          "estilo": "obrigações em alíneas sem numeração própria e texto corrido",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        }
+      ],
+      [
+        {
+          "id": "C01-marketing",
+          "estilo": "padronizado: itens numerados, verbo 'deverá', datas dd/mm/aaaa",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "C02-software",
+          "estilo": "padronizado com verbos variados ('se obriga a', 'compromete-se a', 'caberá à')",
+          "gabarito": 6,
+          "extraidas": 6,
+          "detectadas": 6,
+          "falsos_positivos": 0,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "C03-limpeza",
+          "estilo": "datas por extenso e prazos relativos à assinatura",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "C04-consultoria",
+          "estilo": "partes com outros nomes (PRESTADORA/CLIENTE) e voz passiva",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "C05-eventos",
+          "estilo": "obrigações em alíneas sem numeração própria e texto corrido",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        }
+      ],
+      [
+        {
+          "id": "C01-marketing",
+          "estilo": "padronizado: itens numerados, verbo 'deverá', datas dd/mm/aaaa",
+          "gabarito": 7,
+          "extraidas": 7,
+          "detectadas": 7,
+          "falsos_positivos": 0,
+          "responsavel_ok": 7,
+          "prazo_ok": 7,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "C02-software",
+          "estilo": "padronizado com verbos variados ('se obriga a', 'compromete-se a', 'caberá à')",
+          "gabarito": 6,
+          "extraidas": 7,
+          "detectadas": 6,
+          "falsos_positivos": 1,
+          "responsavel_ok": 6,
+          "prazo_ok": 6,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "C03-limpeza",
+          "estilo": "datas por extenso e prazos relativos à assinatura",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "C04-consultoria",
+          "estilo": "partes com outros nomes (PRESTADORA/CLIENTE) e voz passiva",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "C05-eventos",
+          "estilo": "obrigações em alíneas sem numeração própria e texto corrido",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        }
+      ]
+    ]
+  },
+  "validação": {
+    "repeticoes": [
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 14,
+        "detectadas": 14,
+        "falsos_positivos": 0,
+        "responsavel_ok": 14,
+        "prazo_ok": 14
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 14,
+        "detectadas": 14,
+        "falsos_positivos": 0,
+        "responsavel_ok": 14,
+        "prazo_ok": 14
+      },
+      {
+        "revocacao": 1.0,
+        "precisao": 1.0,
+        "responsavel": 1.0,
+        "prazo": 1.0,
+        "gabarito": 14,
+        "detectadas": 14,
+        "falsos_positivos": 0,
+        "responsavel_ok": 14,
+        "prazo_ok": 14
+      }
+    ],
+    "contratos": [
+      [
+        {
+          "id": "V01-manutencao",
+          "estilo": "ordem inversa ('Fica a CONTRATADA obrigada'), 'É responsabilidade da', futuro simples",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "V02-treinamento",
+          "estilo": "parte no masculino (CONTRATADO), data com pontos (dd.mm.aaaa)",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        },
+        {
+          "id": "V03-conteudo",
+          "estilo": "redação padronizada com cláusulas sem obrigação misturadas",
+          "gabarito": 4,
+          "extraidas": 4,
+          "detectadas": 4,
+          "falsos_positivos": 0,
+          "responsavel_ok": 4,
+          "prazo_ok": 4,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 1
+        }
+      ],
+      [
+        {
+          "id": "V01-manutencao",
+          "estilo": "ordem inversa ('Fica a CONTRATADA obrigada'), 'É responsabilidade da', futuro simples",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "V02-treinamento",
+          "estilo": "parte no masculino (CONTRATADO), data com pontos (dd.mm.aaaa)",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        },
+        {
+          "id": "V03-conteudo",
+          "estilo": "redação padronizada com cláusulas sem obrigação misturadas",
+          "gabarito": 4,
+          "extraidas": 4,
+          "detectadas": 4,
+          "falsos_positivos": 0,
+          "responsavel_ok": 4,
+          "prazo_ok": 4,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 2
+        }
+      ],
+      [
+        {
+          "id": "V01-manutencao",
+          "estilo": "ordem inversa ('Fica a CONTRATADA obrigada'), 'É responsabilidade da', futuro simples",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "V02-treinamento",
+          "estilo": "parte no masculino (CONTRATADO), data com pontos (dd.mm.aaaa)",
+          "gabarito": 5,
+          "extraidas": 5,
+          "detectadas": 5,
+          "falsos_positivos": 0,
+          "responsavel_ok": 5,
+          "prazo_ok": 5,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        },
+        {
+          "id": "V03-conteudo",
+          "estilo": "redação padronizada com cláusulas sem obrigação misturadas",
+          "gabarito": 4,
+          "extraidas": 4,
+          "detectadas": 4,
+          "falsos_positivos": 0,
+          "responsavel_ok": 4,
+          "prazo_ok": 4,
+          "provedor": "llm:claude-sonnet-5-5",
+          "erros": [],
+          "repeticao": 3
+        }
+      ]
+    ]
+  }
+}

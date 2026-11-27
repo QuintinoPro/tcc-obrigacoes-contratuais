@@ -1,0 +1,103 @@
+{
+  "contrato": "C04-consultoria",
+  "repeticao": 1,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:34+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 8.4,
+  "custo_informado_usd": 0.0125509,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1213,
+    "cache_read_input_tokens": 566,
+    "output_tokens": 747,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1213,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 747,
+        "cache_read_input_tokens": 566,
+        "cache_creation_input_tokens": 1213,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1213
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Eta Varejo Ltda.\", \"contratada\": \"Theta Consultoria Ltda.\", \"data_assinatura\": \"2026-08-05\",\n \"obrigacoes\": [\n  {\"clausula\": \"2.1\", \"descricao\": \"A PRESTADORA deverá entregar o diagnóstico organizacional até 05/09/2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Diagnóstico organizacional\", \"prazo\": \"2026-09-05\", \"evidencia_esperada\": \"Documento do diagnóstico organizacional entregue\", \"confianca\": 0.97},\n  {\"clausula\": \"2.2\", \"descricao\": \"O plano de ação será entregue pela PRESTADORA até 05/10/2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Plano de ação\", \"prazo\": \"2026-10-05\", \"evidencia_esperada\": \"Documento do plano de ação entregue\", \"confianca\": 0.97},\n  {\"clausula\": \"2.3\", \"descricao\": \"A PRESTADORA deverá conduzir três oficinas com a diretoria até 30/11/2026, mediante lista de presença assinada.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Três oficinas com a diretoria\", \"prazo\": \"2026-11-30\", \"evidencia_esperada\": \"Lista de presença assinada\", \"confianca\": 0.96},\n  {\"clausula\": \"3.1\", \"descricao\": \"O CLIENTE deverá fornecer os dados financeiros dos últimos dois anos até 15/08/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Dados financeiros dos últimos dois anos\", \"prazo\": \"2026-08-15\", \"evidencia_esperada\": \"Registro de envio dos dados financeiros\", \"confianca\": 0.96},\n  {\"clausula\": \"3.2\", \"descricao\": \"O CLIENTE deverá garantir a presença dos diretores nas oficinas.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Presença dos diretores nas oficinas\", \"prazo\": null, \"evidencia_esperada\": \"\", \"confianca\": 0.85}\n ]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Eta Varejo Ltda.",
+    "contratada": "Theta Consultoria Ltda.",
+    "data_assinatura": "2026-08-05",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A PRESTADORA deverá entregar o diagnóstico organizacional até 05/09/2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Diagnóstico organizacional",
+        "prazo": "2026-09-05",
+        "evidencia_esperada": "Documento do diagnóstico organizacional entregue",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "O plano de ação será entregue pela PRESTADORA até 05/10/2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Plano de ação",
+        "prazo": "2026-10-05",
+        "evidencia_esperada": "Documento do plano de ação entregue",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "A PRESTADORA deverá conduzir três oficinas com a diretoria até 30/11/2026, mediante lista de presença assinada.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Três oficinas com a diretoria",
+        "prazo": "2026-11-30",
+        "evidencia_esperada": "Lista de presença assinada",
+        "confianca": 0.96
+      },
+      {
+        "clausula": "3.1",
+        "descricao": "O CLIENTE deverá fornecer os dados financeiros dos últimos dois anos até 15/08/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Dados financeiros dos últimos dois anos",
+        "prazo": "2026-08-15",
+        "evidencia_esperada": "Registro de envio dos dados financeiros",
+        "confianca": 0.96
+      },
+      {
+        "clausula": "3.2",
+        "descricao": "O CLIENTE deverá garantir a presença dos diretores nas oficinas.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Presença dos diretores nas oficinas",
+        "prazo": null,
+        "evidencia_esperada": "",
+        "confianca": 0.85
+      }
+    ]
+  }
+}

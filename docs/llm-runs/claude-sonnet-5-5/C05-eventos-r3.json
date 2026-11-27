@@ -1,0 +1,103 @@
+{
+  "contrato": "C05-eventos",
+  "repeticao": 3,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:48+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 6.1,
+  "custo_informado_usd": 0.010079699999999999,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 657,
+    "cache_read_input_tokens": 1117,
+    "output_tokens": 717,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 657,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 717,
+        "cache_read_input_tokens": 1117,
+        "cache_creation_input_tokens": 657,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 657
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Iota Associação Comercial\", \"contratada\": \"Kappa Eventos Ltda.\", \"data_assinatura\": \"2026-07-10\", \"obrigacoes\": [{\"clausula\": \"3.1, a\", \"descricao\": \"a) reservar o local do evento até 01/08/2026\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Reserva do local do evento\", \"prazo\": \"2026-08-01\", \"evidencia_esperada\": \"Comprovante de reserva do local do evento\", \"confianca\": 0.95}, {\"clausula\": \"3.1, b\", \"descricao\": \"b) contratar o serviço de buffet até 15/08/2026\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Contratação do serviço de buffet\", \"prazo\": \"2026-08-15\", \"evidencia_esperada\": \"Contrato ou comprovante de contratação do serviço de buffet\", \"confianca\": 0.95}, {\"clausula\": \"3.1, c\", \"descricao\": \"c) enviar o relatório de público até 30/09/2026\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Relatório de público\", \"prazo\": \"2026-09-30\", \"evidencia_esperada\": \"Relatório de público enviado à CONTRATANTE\", \"confianca\": 0.95}, {\"clausula\": \"4.1\", \"descricao\": \"A CONTRATANTE deverá aprovar a lista de convidados até 20/08/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Aprovação da lista de convidados\", \"prazo\": \"2026-08-20\", \"evidencia_esperada\": \"Registro formal de aprovação da lista de convidados\", \"confianca\": 0.95}, {\"clausula\": \"4.1\", \"descricao\": \"A CONTRATANTE deverá também efetuar o pagamento do sinal até 20/07/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Pagamento do sinal\", \"prazo\": \"2026-07-20\", \"evidencia_esperada\": \"Comprovante de pagamento do sinal\", \"confianca\": 0.95}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Iota Associação Comercial",
+    "contratada": "Kappa Eventos Ltda.",
+    "data_assinatura": "2026-07-10",
+    "obrigacoes": [
+      {
+        "clausula": "3.1, a",
+        "descricao": "a) reservar o local do evento até 01/08/2026",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Reserva do local do evento",
+        "prazo": "2026-08-01",
+        "evidencia_esperada": "Comprovante de reserva do local do evento",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.1, b",
+        "descricao": "b) contratar o serviço de buffet até 15/08/2026",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Contratação do serviço de buffet",
+        "prazo": "2026-08-15",
+        "evidencia_esperada": "Contrato ou comprovante de contratação do serviço de buffet",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "3.1, c",
+        "descricao": "c) enviar o relatório de público até 30/09/2026",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Relatório de público",
+        "prazo": "2026-09-30",
+        "evidencia_esperada": "Relatório de público enviado à CONTRATANTE",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "4.1",
+        "descricao": "A CONTRATANTE deverá aprovar a lista de convidados até 20/08/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Aprovação da lista de convidados",
+        "prazo": "2026-08-20",
+        "evidencia_esperada": "Registro formal de aprovação da lista de convidados",
+        "confianca": 0.95
+      },
+      {
+        "clausula": "4.1",
+        "descricao": "A CONTRATANTE deverá também efetuar o pagamento do sinal até 20/07/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Pagamento do sinal",
+        "prazo": "2026-07-20",
+        "evidencia_esperada": "Comprovante de pagamento do sinal",
+        "confianca": 0.95
+      }
+    ]
+  }
+}

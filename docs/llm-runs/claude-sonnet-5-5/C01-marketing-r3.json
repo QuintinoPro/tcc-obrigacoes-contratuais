@@ -1,0 +1,121 @@
+{
+  "contrato": "C01-marketing",
+  "repeticao": 3,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:15+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 8.3,
+  "custo_informado_usd": 0.0208646,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1907,
+    "cache_read_input_tokens": 566,
+    "output_tokens": 1294,
+    "output_tokens_details": {
+      "thinking_tokens": 47
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1907,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1294,
+        "cache_read_input_tokens": 566,
+        "cache_creation_input_tokens": 1907,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1907
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Alfa Comércio de Alimentos Ltda.\", \"contratada\": \"Beta Serviços Digitais Ltda.\", \"data_assinatura\": \"2026-11-03\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"A CONTRATADA deverá entregar o plano de mídia do trimestre até 20/11/2026, mediante envio do documento em PDF à CONTRATANTE.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Plano de mídia do trimestre\", \"prazo\": \"2026-11-20\", \"evidencia_esperada\": \"Envio do documento em PDF à CONTRATANTE\", \"confianca\": 0.97}, {\"clausula\": \"2.2\", \"descricao\": \"A CONTRATADA deverá produzir 12 peças criativas para redes sociais até 10/12/2026, comprovado por meio de link da pasta compartilhada com os arquivos finais.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"12 peças criativas para redes sociais\", \"prazo\": \"2026-12-10\", \"evidencia_esperada\": \"Link da pasta compartilhada com os arquivos finais\", \"confianca\": 0.97}, {\"clausula\": \"2.3\", \"descricao\": \"A CONTRATADA obriga-se a configurar as campanhas de mídia paga em até 30 dias contados da assinatura, mediante relatório de configuração com capturas de tela.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Configuração das campanhas de mídia paga\", \"prazo\": \"2026-12-03\", \"evidencia_esperada\": \"Relatório de configuração com capturas de tela\", \"confianca\": 0.92}, {\"clausula\": \"2.4\", \"descricao\": \"A CONTRATADA deverá apresentar o relatório mensal de desempenho até 05/01/2027, mediante envio do relatório com os indicadores acordados.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Relatório mensal de desempenho\", \"prazo\": \"2027-01-05\", \"evidencia_esperada\": \"Envio do relatório com os indicadores acordados\", \"confianca\": 0.96}, {\"clausula\": \"3.1\", \"descricao\": \"A CONTRATANTE deverá fornecer acesso às contas de anúncios e ao material de marca até 10/11/2026, mediante concessão de acesso registrada por e-mail.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Acesso às contas de anúncios e ao material de marca\", \"prazo\": \"2026-11-10\", \"evidencia_esperada\": \"Concessão de acesso registrada por e-mail\", \"confianca\": 0.96}, {\"clausula\": \"3.2\", \"descricao\": \"A CONTRATANTE deverá aprovar ou solicitar ajustes nas peças criativas em até 5 (cinco) dias úteis após cada entrega.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Aprovação ou solicitação de ajustes nas peças criativas\", \"prazo\": null, \"evidencia_esperada\": \"\", \"confianca\": 0.85}, {\"clausula\": \"3.3\", \"descricao\": \"A CONTRATANTE obriga-se a efetuar o pagamento da primeira parcela de R$ 8.500,00 até 15/12/2026, mediante comprovante de transferência bancária.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Pagamento da primeira parcela de R$ 8.500,00\", \"prazo\": \"2026-12-15\", \"evidencia_esperada\": \"Comprovante de transferência bancária\", \"confianca\": 0.97}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Alfa Comércio de Alimentos Ltda.",
+    "contratada": "Beta Serviços Digitais Ltda.",
+    "data_assinatura": "2026-11-03",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A CONTRATADA deverá entregar o plano de mídia do trimestre até 20/11/2026, mediante envio do documento em PDF à CONTRATANTE.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Plano de mídia do trimestre",
+        "prazo": "2026-11-20",
+        "evidencia_esperada": "Envio do documento em PDF à CONTRATANTE",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "A CONTRATADA deverá produzir 12 peças criativas para redes sociais até 10/12/2026, comprovado por meio de link da pasta compartilhada com os arquivos finais.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "12 peças criativas para redes sociais",
+        "prazo": "2026-12-10",
+        "evidencia_esperada": "Link da pasta compartilhada com os arquivos finais",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "A CONTRATADA obriga-se a configurar as campanhas de mídia paga em até 30 dias contados da assinatura, mediante relatório de configuração com capturas de tela.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Configuração das campanhas de mídia paga",
+        "prazo": "2026-12-03",
+        "evidencia_esperada": "Relatório de configuração com capturas de tela",
+        "confianca": 0.92
+      },
+      {
+        "clausula": "2.4",
+        "descricao": "A CONTRATADA deverá apresentar o relatório mensal de desempenho até 05/01/2027, mediante envio do relatório com os indicadores acordados.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Relatório mensal de desempenho",
+        "prazo": "2027-01-05",
+        "evidencia_esperada": "Envio do relatório com os indicadores acordados",
+        "confianca": 0.96
+      },
+      {
+        "clausula": "3.1",
+        "descricao": "A CONTRATANTE deverá fornecer acesso às contas de anúncios e ao material de marca até 10/11/2026, mediante concessão de acesso registrada por e-mail.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Acesso às contas de anúncios e ao material de marca",
+        "prazo": "2026-11-10",
+        "evidencia_esperada": "Concessão de acesso registrada por e-mail",
+        "confianca": 0.96
+      },
+      {
+        "clausula": "3.2",
+        "descricao": "A CONTRATANTE deverá aprovar ou solicitar ajustes nas peças criativas em até 5 (cinco) dias úteis após cada entrega.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Aprovação ou solicitação de ajustes nas peças criativas",
+        "prazo": null,
+        "evidencia_esperada": "",
+        "confianca": 0.85
+      },
+      {
+        "clausula": "3.3",
+        "descricao": "A CONTRATANTE obriga-se a efetuar o pagamento da primeira parcela de R$ 8.500,00 até 15/12/2026, mediante comprovante de transferência bancária.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Pagamento da primeira parcela de R$ 8.500,00",
+        "prazo": "2026-12-15",
+        "evidencia_esperada": "Comprovante de transferência bancária",
+        "confianca": 0.97
+      }
+    ]
+  }
+}

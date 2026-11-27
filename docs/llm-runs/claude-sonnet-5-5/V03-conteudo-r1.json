@@ -1,0 +1,94 @@
+{
+  "contrato": "V03-conteudo",
+  "repeticao": 1,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:57+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 8.4,
+  "custo_informado_usd": 0.0157364,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 1386,
+    "cache_read_input_tokens": 566,
+    "output_tokens": 995,
+    "output_tokens_details": {
+      "thinking_tokens": 309
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 1386,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 995,
+        "cache_read_input_tokens": 566,
+        "cache_creation_input_tokens": 1386,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1386
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Xi Educação Online Ltda.\", \"contratada\": \"Ômicron Conteúdo Ltda.\", \"data_assinatura\": \"2026-11-01\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"A CONTRATADA deverá entregar o roteiro das 10 videoaulas até 20/11/2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Roteiro das 10 videoaulas\", \"prazo\": \"2026-11-20\", \"evidencia_esperada\": \"Registro de entrega dos roteiros das 10 videoaulas à CONTRATANTE\", \"confianca\": 0.97}, {\"clausula\": \"2.2\", \"descricao\": \"A CONTRATADA compromete-se a gravar e editar as videoaulas até 18/12/2026, mediante envio dos arquivos em alta resolução.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Videoaulas gravadas e editadas\", \"prazo\": \"2026-12-18\", \"evidencia_esperada\": \"Envio dos arquivos das videoaulas em alta resolução\", \"confianca\": 0.93}, {\"clausula\": \"2.3\", \"descricao\": \"A CONTRATANTE deverá revisar os roteiros em até 7 dias após o recebimento.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Revisão dos roteiros\", \"prazo\": null, \"evidencia_esperada\": \"Registro da revisão dos roteiros enviada à CONTRATADA\", \"confianca\": 0.9}, {\"clausula\": \"2.4\", \"descricao\": \"A CONTRATANTE obriga-se a pagar 50% do valor na assinatura deste contrato.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Pagamento de 50% do valor do contrato\", \"prazo\": \"2026-11-01\", \"evidencia_esperada\": \"Comprovante de pagamento de 50% do valor do contrato\", \"confianca\": 0.95}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Xi Educação Online Ltda.",
+    "contratada": "Ômicron Conteúdo Ltda.",
+    "data_assinatura": "2026-11-01",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A CONTRATADA deverá entregar o roteiro das 10 videoaulas até 20/11/2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Roteiro das 10 videoaulas",
+        "prazo": "2026-11-20",
+        "evidencia_esperada": "Registro de entrega dos roteiros das 10 videoaulas à CONTRATANTE",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "A CONTRATADA compromete-se a gravar e editar as videoaulas até 18/12/2026, mediante envio dos arquivos em alta resolução.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Videoaulas gravadas e editadas",
+        "prazo": "2026-12-18",
+        "evidencia_esperada": "Envio dos arquivos das videoaulas em alta resolução",
+        "confianca": 0.93
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "A CONTRATANTE deverá revisar os roteiros em até 7 dias após o recebimento.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Revisão dos roteiros",
+        "prazo": null,
+        "evidencia_esperada": "Registro da revisão dos roteiros enviada à CONTRATADA",
+        "confianca": 0.9
+      },
+      {
+        "clausula": "2.4",
+        "descricao": "A CONTRATANTE obriga-se a pagar 50% do valor na assinatura deste contrato.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Pagamento de 50% do valor do contrato",
+        "prazo": "2026-11-01",
+        "evidencia_esperada": "Comprovante de pagamento de 50% do valor do contrato",
+        "confianca": 0.95
+      }
+    ]
+  }
+}

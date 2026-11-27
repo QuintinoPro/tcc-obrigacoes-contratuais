@@ -1,0 +1,112 @@
+{
+  "contrato": "C02-software",
+  "repeticao": 2,
+  "modelo_solicitado": "claude-sonnet-5-5",
+  "modelos_usados": [
+    "claude-haiku-5-5",
+    "claude-sonnet-5-5"
+  ],
+  "data_utc": "2026-11-27T02:21:21+00:00",
+  "cli": "2.1.332 (Claude Code)",
+  "prompt_sha256": "8d1339fc8950a638a2915782a423a4cb74d26c61d3529717cca611ea6cdf12a2",
+  "segundos": 7.6,
+  "custo_informado_usd": 0.0115771,
+  "uso": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 656,
+    "cache_read_input_tokens": 1269,
+    "output_tokens": 864,
+    "output_tokens_details": {
+      "thinking_tokens": 0
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 656,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 864,
+        "cache_read_input_tokens": 1269,
+        "cache_creation_input_tokens": 656,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 656
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "erro_parse": null,
+  "resposta_bruta": "{\"contratante\": \"Gama Logística S.A.\", \"contratada\": \"Delta Tecnologia Ltda.\", \"data_assinatura\": \"2026-10-01\", \"obrigacoes\": [{\"clausula\": \"2.1\", \"descricao\": \"A CONTRATADA se obriga a entregar o documento de requisitos até 30/10/2026, mediante aceite formal por e-mail.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Documento de requisitos\", \"prazo\": \"2026-10-30\", \"evidencia_esperada\": \"Aceite formal por e-mail\", \"confianca\": 0.97}, {\"clausula\": \"2.2\", \"descricao\": \"A CONTRATADA compromete-se a disponibilizar a versão beta do sistema em ambiente de homologação até 15/12/2026.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Versão beta do sistema em ambiente de homologação\", \"prazo\": \"2026-12-15\", \"evidencia_esperada\": \"\", \"confianca\": 0.93}, {\"clausula\": \"2.3\", \"descricao\": \"Caberá à CONTRATADA corrigir os defeitos críticos em até 48 horas após a notificação.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Correção dos defeitos críticos\", \"prazo\": null, \"evidencia_esperada\": \"\", \"confianca\": 0.9}, {\"clausula\": \"2.4\", \"descricao\": \"A CONTRATADA deverá entregar o código-fonte e a documentação técnica até 31/01/2027, mediante termo de entrega assinado.\", \"responsavel\": \"CONTRATADA\", \"entregavel\": \"Código-fonte e documentação técnica\", \"prazo\": \"2027-01-31\", \"evidencia_esperada\": \"Termo de entrega assinado\", \"confianca\": 0.97}, {\"clausula\": \"3.1\", \"descricao\": \"A CONTRATANTE deverá designar um responsável técnico até 10/10/2026.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Designação de responsável técnico\", \"prazo\": \"2026-10-10\", \"evidencia_esperada\": \"\", \"confianca\": 0.94}, {\"clausula\": \"3.2\", \"descricao\": \"A CONTRATANTE se responsabiliza por homologar cada entrega em até 10 dias corridos após o recebimento.\", \"responsavel\": \"CONTRATANTE\", \"entregavel\": \"Homologação de cada entrega\", \"prazo\": null, \"evidencia_esperada\": \"\", \"confianca\": 0.9}]}",
+  "extracao": {
+    "provedor": "llm:claude-sonnet-5-5",
+    "contratante": "Gama Logística S.A.",
+    "contratada": "Delta Tecnologia Ltda.",
+    "data_assinatura": "2026-10-01",
+    "obrigacoes": [
+      {
+        "clausula": "2.1",
+        "descricao": "A CONTRATADA se obriga a entregar o documento de requisitos até 30/10/2026, mediante aceite formal por e-mail.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Documento de requisitos",
+        "prazo": "2026-10-30",
+        "evidencia_esperada": "Aceite formal por e-mail",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "2.2",
+        "descricao": "A CONTRATADA compromete-se a disponibilizar a versão beta do sistema em ambiente de homologação até 15/12/2026.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Versão beta do sistema em ambiente de homologação",
+        "prazo": "2026-12-15",
+        "evidencia_esperada": "",
+        "confianca": 0.93
+      },
+      {
+        "clausula": "2.3",
+        "descricao": "Caberá à CONTRATADA corrigir os defeitos críticos em até 48 horas após a notificação.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Correção dos defeitos críticos",
+        "prazo": null,
+        "evidencia_esperada": "",
+        "confianca": 0.9
+      },
+      {
+        "clausula": "2.4",
+        "descricao": "A CONTRATADA deverá entregar o código-fonte e a documentação técnica até 31/01/2027, mediante termo de entrega assinado.",
+        "responsavel": "CONTRATADA",
+        "entregavel": "Código-fonte e documentação técnica",
+        "prazo": "2027-01-31",
+        "evidencia_esperada": "Termo de entrega assinado",
+        "confianca": 0.97
+      },
+      {
+        "clausula": "3.1",
+        "descricao": "A CONTRATANTE deverá designar um responsável técnico até 10/10/2026.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Designação de responsável técnico",
+        "prazo": "2026-10-10",
+        "evidencia_esperada": "",
+        "confianca": 0.94
+      },
+      {
+        "clausula": "3.2",
+        "descricao": "A CONTRATANTE se responsabiliza por homologar cada entrega em até 10 dias corridos após o recebimento.",
+        "responsavel": "CONTRATANTE",
+        "entregavel": "Homologação de cada entrega",
+        "prazo": null,
+        "evidencia_esperada": "",
+        "confianca": 0.9
+      }
+    ]
+  }
+}

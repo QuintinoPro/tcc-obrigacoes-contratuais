@@ -120,11 +120,21 @@ table.razao td .det { display: block; color: var(--grafite); font-size: 15px; ma
 .figura { border: 1px solid var(--linha); border-radius: 14px; background: #FFFFFF; padding: 16px; }
 .figura figcaption { font: 400 13px/1.5 var(--mono); color: var(--grafite); margin-top: 10px; }
 
+.contato { background: var(--tinta); color: var(--papel); border-top: 0; }
+.contato h2 { color: var(--papel); max-width: 16em; }
+.contato p { color: #C9D3E3; font-size: 19px; max-width: 34em; margin: 0; }
+.contato-grade { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 48px; align-items: center; }
+.contato-acoes { display: flex; flex-direction: column; gap: 14px; align-items: stretch; }
+.contato-acoes .btn { justify-content: center; }
+.contato .btn:not(.cheio) { border-color: var(--papel); color: var(--papel); }
+.contato .btn:not(.cheio):hover { background: var(--papel); color: var(--tinta); }
+.contato a:focus-visible { outline-color: #F2B79F; }
+
 .rodape { padding: 40px 0 56px; border-top: 1px solid var(--linha); color: var(--grafite); font-size: 15px; }
 .rodape .wrap { display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; align-items: center; }
 
 @media (max-width: 920px) {
-  .heroi .wrap, .pratica, .academico { grid-template-columns: 1fr; }
+  .heroi .wrap, .pratica, .academico, .contato-grade { grid-template-columns: 1fr; }
   .cenas, .publicos { grid-template-columns: 1fr; }
   .passos { grid-template-columns: 1fr 1fr; }
   .passos li:nth-child(2) { border-right: 0; }

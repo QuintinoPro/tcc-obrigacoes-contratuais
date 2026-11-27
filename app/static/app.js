@@ -19,16 +19,16 @@ async function api(path, opts = {}) {
 }
 
 document.querySelectorAll("#roleSeg button").forEach(b => b.onclick = () => {
-  S.role = b.dataset.r; document.querySelectorAll("#roleSeg button").forEach(x => x.classList.toggle("on", x === b));
+  S.role = b.dataset.r; document.querySelectorAll("#roleSeg button").forEach(x => { x.classList.toggle("on", x === b); x.setAttribute("aria-pressed", x === b); });
   $("#userName").value = S.role === "CONTRATANTE" ? "ana.contratante" : "bruno.contratada";
   if (S.current) render(S.current);
 });
 
 async function loadList() {
   const list = await api("/api/contracts");
-  $("#clist").innerHTML = list.map(c => `<li data-id="${c.id}" class="${S.current && S.current.id === c.id ? "on" : ""}">
+  $("#clist").innerHTML = list.map(c => `<li class="${S.current && S.current.id === c.id ? "on" : ""}"><button type="button" data-id="${c.id}" ${S.current && S.current.id === c.id ? 'aria-current="true"' : ""}>
     <div class="t">${esc(c.titulo)}</div><div class="muted" style="font-size:12px">${esc(c.contratante || "")} ${badge(c.status)}</div></li>`).join("");
-  document.querySelectorAll("#clist li").forEach(li => li.onclick = () => openContract(+li.dataset.id));
+  document.querySelectorAll("#clist button").forEach(b => b.onclick = () => openContract(+b.dataset.id));
   const ci = await api("/api/chain");
   $("#chainInfo").innerHTML = `Rede: ${esc(ci.mode)}<br>Smart contract: ${esc(ci.contract_address)}<br>Bloco atual: ${ci.block}`;
 }
@@ -53,24 +53,24 @@ function render(c) {
 function reviewView(c) {
   const ex = c.extracao;
   const rows = ex.obrigacoes.map((o, i) => `<tr data-i="${i}">
-    <td><input type="checkbox" class="inc" checked></td>
-    <td style="width:64px"><input class="f" data-k="clausula" value="${esc(o.clausula)}"></td>
-    <td><input class="f" data-k="entregavel" value="${esc(o.entregavel)}"><div class="muted" style="font-size:12px;margin-top:4px">${esc(o.descricao)}</div></td>
-    <td style="width:170px"><select class="f" data-k="responsavel">${["CONTRATANTE", "CONTRATADA", ""].map(p => `<option ${p === o.responsavel ? "selected" : ""} value="${p}">${p || "— definir —"}</option>`).join("")}</select></td>
-    <td style="width:150px"><input type="date" class="f" data-k="prazo" value="${o.prazo || ""}"></td>
-    <td style="width:200px"><input class="f" data-k="evidencia_esperada" value="${esc(o.evidencia_esperada)}"></td>
+    <td><input type="checkbox" class="inc" checked aria-label="Incluir a obrigação da cláusula ${esc(o.clausula)}"></td>
+    <td style="width:64px"><input class="f" data-k="clausula" value="${esc(o.clausula)}" aria-label="Cláusula"></td>
+    <td><input class="f" data-k="entregavel" value="${esc(o.entregavel)}" aria-label="Entregável da cláusula ${esc(o.clausula)}"><div class="muted" style="font-size:12px;margin-top:4px">${esc(o.descricao)}</div></td>
+    <td style="width:170px"><select class="f" data-k="responsavel" aria-label="Responsável pela cláusula ${esc(o.clausula)}">${["CONTRATANTE", "CONTRATADA", ""].map(p => `<option ${p === o.responsavel ? "selected" : ""} value="${p}">${p || "— definir —"}</option>`).join("")}</select></td>
+    <td style="width:150px"><input type="date" class="f" data-k="prazo" value="${o.prazo || ""}" aria-label="Prazo da cláusula ${esc(o.clausula)}"></td>
+    <td style="width:200px"><input class="f" data-k="evidencia_esperada" value="${esc(o.evidencia_esperada)}" aria-label="Evidência esperada da cláusula ${esc(o.clausula)}"></td>
     <td class="conf ${o.confianca < .8 ? "low" : ""}">${(o.confianca ?? 0).toFixed(2)}</td></tr>`).join("");
   return `<div class="card">
     <h2>Revisão humana da extração</h2>
     <div class="note">A IA sugeriu <b>${ex.obrigacoes.length} obrigações</b> (provedor: ${esc(ex.provedor)}${ex.data_assinatura ? ", assinatura em " + fmtDate(ex.data_assinatura) : ""}).
       Confira, corrija o que precisar e confirme. Itens com confiança baixa aparecem em laranja.${ex.aviso ? "<br>" + esc(ex.aviso) : ""}</div>
     <div class="grid2">
-      <div class="kv"><div class="k">Contratante</div><input id="rvA" value="${esc(ex.contratante)}" style="width:100%"></div>
-      <div class="kv"><div class="k">Contratada</div><input id="rvB" value="${esc(ex.contratada)}" style="width:100%"></div>
+      <div class="kv"><label class="k" for="rvA">Contratante</label><input id="rvA" value="${esc(ex.contratante)}" style="width:100%" autocomplete="off"></div>
+      <div class="kv"><label class="k" for="rvB">Contratada</label><input id="rvB" value="${esc(ex.contratada)}" style="width:100%" autocomplete="off"></div>
     </div>
     <table style="margin-top:14px"><thead><tr><th></th><th>Cl.</th><th>Entregável / texto da cláusula</th><th>Responsável</th><th>Prazo</th><th>Evidência esperada</th><th>Conf.</th></tr></thead>
     <tbody>${rows}</tbody></table>
-    <div style="margin-top:14px;text-align:right"><button class="btn primary" id="confirmBtn">Confirmar e registrar na blockchain</button></div>
+    <div style="margin-top:14px;text-align:right"><button type="button" class="btn primary" id="confirmBtn">Confirmar e registrar na blockchain</button></div>
   </div>`;
 }
 
@@ -81,8 +81,8 @@ function obligationsView(c) {
     const isExec = S.role === o.responsavel;
     const moves = (isExec ? EXEC : APPR)[o.status] || [];
     const acts = moves.map(m => m === "ENTREGUE"
-      ? `<label class="btn small primary">${ACTION[m]}<input type="file" hidden class="evid" data-id="${o.id}"></label>`
-      : `<button class="btn small ${m === "REJEITADO" ? "" : "primary"} mv" data-id="${o.id}" data-to="${m}">${ACTION[m]}</button>`).join("");
+      ? `<label class="btn small primary">${ACTION[m]}<input type="file" class="evid vh" data-id="${o.id}" aria-label="Arquivo de evidência da cláusula ${esc(o.clausula)}"></label>`
+      : `<button type="button" class="btn small ${m === "REJEITADO" ? "" : "primary"} mv" data-id="${o.id}" data-to="${m}">${ACTION[m]}</button>`).join("");
     const ev = o.evidencias.map(e => `<div class="hash">📎 ${esc(e.nome_original)} · ${short(e.sha256)}</div>`).join("");
     return `<tr>
       <td class="mono">${esc(o.clausula)}</td>
@@ -152,11 +152,18 @@ async function move(id, to, file) {
 $("#upload").onchange = async e => {
   const f = e.target.files[0]; if (!f) return;
   const fd = new FormData(); fd.append("arquivo", f); fd.append("usuario", $("#userName").value);
-  try { const r = await api("/api/contracts", { method: "POST", body: fd }); toast("Contrato registrado; revise a extração"); openContract(r.id); }
+  const lab = $("#uploadLabel"); lab.setAttribute("aria-busy", "true"); toast("Processando o contrato…");
+  try { const r = await api("/api/contracts", { method: "POST", body: fd }); toast("Contrato registrado. Revise a extração e confirme."); openContract(r.id); }
   catch (err) { toast(err.message, true); }
+  finally { lab.removeAttribute("aria-busy"); }
   e.target.value = "";
 };
-$("#sampleBtn").onclick = async () => { try { const r = await api("/api/contracts/exemplo", { method: "POST" }); openContract(r.id); } catch (e) { toast(e.message, true); } };
+$("#sampleBtn").onclick = async () => {
+  const b = $("#sampleBtn"); b.disabled = true; b.setAttribute("aria-busy", "true"); toast("Processando o contrato de exemplo…");
+  try { const r = await api("/api/contracts/exemplo", { method: "POST" }); toast("Contrato registrado. Revise a extração e confirme."); openContract(r.id); }
+  catch (e) { toast(e.message, true); }
+  finally { b.disabled = false; b.removeAttribute("aria-busy"); }
+};
 $("#verifyFile").onchange = async e => {
   const f = e.target.files[0]; if (!f) return;
   const fd = new FormData(); fd.append("arquivo", f);

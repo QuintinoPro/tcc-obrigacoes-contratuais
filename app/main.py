@@ -4,6 +4,7 @@ from __future__ import annotations
 import hashlib
 import io
 import json
+import logging
 import os
 import shutil
 import sqlite3
@@ -188,8 +189,9 @@ def create_app(data_dir: Path | None = None) -> FastAPI:
             text = "\n".join(p.extract_text() or "" for p in reader.pages)
         except HTTPException:
             raise
-        except Exception:
-            raise HTTPException(400, "Não foi possível ler o PDF")
+        except Exception as e:
+            logging.getLogger("tcc").warning("PDF ilegível: %s: %s", type(e).__name__, e)
+            raise HTTPException(400, "Não foi possível ler o PDF. Verifique se o arquivo não está corrompido ou protegido por senha.")
         if not text.strip():
             raise HTTPException(422, "O PDF não tem texto extraível (PDF escaneado não é suportado)")
         sugestao = extract(text)

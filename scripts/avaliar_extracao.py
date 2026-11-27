@@ -15,7 +15,7 @@ from pathlib import Path
 from pypdf import PdfReader
 
 from app import extractor, extractor_v1
-from samples.corpus import CORPUS, HOLDOUT
+from samples.corpus import ADVERSARIAL, CORPUS, HOLDOUT
 from samples.gerar_contrato_exemplo import gerar
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -23,7 +23,7 @@ OUT_PDF = ROOT / "samples" / "corpus"
 OUT_DOC = ROOT.parent / "docs"
 
 
-VERSOES = {"v1": lambda t: extractor_v1.normalize(extractor_v1.extract_rules(t)),
+VERSOES = {"v1": lambda t: extractor.normalize(extractor_v1.extract_rules(t)),
            "v2": lambda t: extractor.normalize(extractor.extract_rules(t))}
 
 
@@ -80,7 +80,7 @@ def tabela(res: list[dict]) -> tuple[str, dict]:
 
 def main():
     OUT_PDF.mkdir(exist_ok=True)
-    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT}
+    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT, "robustez (injeção)": ADVERSARIAL}
     md, dump, resumo = [], {}, ["| Versão | Conjunto | Obrigações | Recall | Precisão | Responsável | Prazo |", "|---|---|---|---|---|---|---|"]
     for nome_c, conj in conjuntos.items():
         for v, fn in VERSOES.items():

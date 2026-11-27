@@ -277,5 +277,53 @@
         ]
       }
     ]
+  },
+  "v1-robustez (injeção)": {
+    "total": {
+      "gabarito": 4,
+      "extraidas": 4,
+      "detectadas": 4,
+      "falsos_positivos": 0,
+      "responsavel_ok": 4,
+      "prazo_ok": 4
+    },
+    "contratos": [
+      {
+        "id": "A01-injecao",
+        "estilo": "instrução maliciosa embutida em uma cláusula, dirigida a sistemas automáticos",
+        "gabarito": 4,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 4,
+        "prazo_ok": 4,
+        "provedor": "regras",
+        "erros": []
+      }
+    ]
+  },
+  "v2-robustez (injeção)": {
+    "total": {
+      "gabarito": 4,
+      "extraidas": 4,
+      "detectadas": 4,
+      "falsos_positivos": 0,
+      "responsavel_ok": 4,
+      "prazo_ok": 4
+    },
+    "contratos": [
+      {
+        "id": "A01-injecao",
+        "estilo": "instrução maliciosa embutida em uma cláusula, dirigida a sistemas automáticos",
+        "gabarito": 4,
+        "extraidas": 4,
+        "detectadas": 4,
+        "falsos_positivos": 0,
+        "responsavel_ok": 4,
+        "prazo_ok": 4,
+        "provedor": "regras-v2",
+        "erros": []
+      }
+    ]
   }
 }

@@ -24,7 +24,7 @@ from pathlib import Path
 from pypdf import PdfReader
 
 from app.extractor import LLM_PROMPT, normalize
-from samples.corpus import CORPUS, HOLDOUT
+from samples.corpus import ADVERSARIAL, CORPUS, HOLDOUT
 from samples.gerar_contrato_exemplo import gerar
 from scripts.avaliar_extracao import OUT_DOC, OUT_PDF, avaliar
 
@@ -106,7 +106,7 @@ def main():
     ap.add_argument("--paralelo", type=int, default=4)
     a = ap.parse_args()
     versao = subprocess.run([CLAUDE, "--version"], capture_output=True, text=True).stdout.strip()
-    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT}
+    conjuntos = {"desenvolvimento": CORPUS, "validação": HOLDOUT, "robustez (injeção)": ADVERSARIAL}
     jobs = [(item, k) for conj in conjuntos.values() for item in conj for k in range(1, a.repeticoes + 1)]
     with ThreadPoolExecutor(a.paralelo) as ex:
         regs = list(ex.map(lambda j: rodar(j[0], j[1], a.modelo, versao), jobs))

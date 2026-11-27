@@ -1,8 +1,10 @@
-# Obrigações contratuais com IA, blockchain e smart contracts
+# Pacta
+
+**Pactos devem ser cumpridos. E provados.** Obrigações contratuais com IA, blockchain e smart contracts.
 
 Protótipo e materiais de avaliação da monografia **"Sistema inteligente baseado em Inteligência Artificial e blockchain para gestão e rastreabilidade de obrigações contratuais"**, de Lucas Quintino Gomes Araújo, apresentada ao curso de Sistemas de Informação da Universidade Veiga de Almeida (UVA), 2026, sob orientação do Prof. Claudio José Marques de Souza.
 
-Demonstração: https://tcc.agenciastocks.com (rede EVM local em memória; os dados são apagados quando a aplicação reinicia).
+Site: https://tcc.agenciastocks.com · protótipo: https://tcc.agenciastocks.com/app/ (rede EVM local em memória; os dados são apagados quando a aplicação reinicia). Identidade visual em `docs/marca/`.
 
 ## O que é
 

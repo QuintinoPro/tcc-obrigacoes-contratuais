@@ -3,133 +3,182 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Obrigações Contratuais · IA + Blockchain</title>
-<style>
-  :root {
-    --bg: #f6f7f9; --card: #fff; --ink: #14181f; --muted: #5b6472; --line: #e3e6eb;
-    --accent: #1d4ed8; --accent-soft: #e8eefc; --ok: #15803d; --ok-soft: #e7f5ec;
-    --warn: #b45309; --warn-soft: #fdf3e3; --bad: #b91c1c; --bad-soft: #fdecec; --mono: ui-monospace, SFMono-Regular, Menlo, monospace;
-  }
-  * { box-sizing: border-box; }
-  body { margin: 0; font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; background: var(--bg); color: var(--ink); }
-  header { display: flex; align-items: center; gap: 24px; padding: 14px 28px; background: var(--card); border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 5; }
-  header h1 { font-size: 15px; margin: 0; font-weight: 650; }
-  header .sub { color: var(--muted); font-size: 12px; }
-  header .spacer { flex: 1; }
-  .role { display: flex; gap: 8px; align-items: center; font-size: 13px; }
-  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
-  .seg button { border: 0; background: transparent; padding: 6px 12px; cursor: pointer; font: inherit; color: var(--muted); }
-  .seg button.on { background: var(--ink); color: #fff; }
-  input, select, textarea { font: inherit; border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; background: #fff; color: var(--ink); }
-  main { display: grid; grid-template-columns: 300px 1fr; gap: 24px; padding: 24px 28px; max-width: 1500px; margin: 0 auto; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 18px; }
-  .card + .card { margin-top: 16px; }
-  h2 { font-size: 13px; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin: 0 0 12px; font-weight: 600; }
-  h3 { font-size: 18px; margin: 0 0 4px; }
-  .btn { border: 1px solid var(--line); background: #fff; border-radius: 7px; padding: 7px 12px; cursor: pointer; font: inherit; font-weight: 500; }
-  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-  .btn.small { padding: 3px 9px; font-size: 12px; }
-  .btn:disabled { opacity: .5; cursor: default; }
-  .stack > * + * { margin-top: 10px; }
-  .clist { list-style: none; margin: 0; padding: 0; }
-  .clist li { padding: 10px; border-radius: 8px; cursor: pointer; border: 1px solid transparent; }
-  .clist li:hover { background: var(--bg); }
-  .clist li.on { background: var(--accent-soft); border-color: #c9d6f7; }
-  .clist .t { font-weight: 600; font-size: 13px; }
-  .muted { color: var(--muted); }
-  .mono { font-family: var(--mono); font-size: 12px; }
-  .hash { font-family: var(--mono); font-size: 11.5px; color: var(--muted); word-break: break-all; }
-  .grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 14px; }
-  .kv .k { font-size: 11.5px; color: var(--muted); text-transform: uppercase; letter-spacing: .03em; }
-  .kv .v { font-weight: 500; }
-  table { width: 100%; border-collapse: collapse; }
-  th { text-align: left; font-size: 11.5px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .03em; padding: 8px; border-bottom: 1px solid var(--line); }
-  td { padding: 10px 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  tr:last-child td { border-bottom: 0; }
-  td input, td select { width: 100%; }
-  .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11.5px; font-weight: 600; white-space: nowrap; }
-  .s-PENDENTE { background: #eef0f3; color: #3f4754; }
-  .s-EM_EXECUCAO { background: var(--accent-soft); color: var(--accent); }
-  .s-ENTREGUE, .s-EM_ANALISE { background: var(--warn-soft); color: var(--warn); }
-  .s-APROVADO, .s-CONCLUIDO, .s-ATIVO { background: var(--ok-soft); color: var(--ok); }
-  .s-REJEITADO { background: var(--bad-soft); color: var(--bad); }
-  .s-EM_REVISAO { background: var(--warn-soft); color: var(--warn); }
-  .late { color: var(--bad); font-weight: 600; }
-  .chain-ok { color: var(--ok); font-size: 12px; }
-  .conf { font-family: var(--mono); font-size: 12px; }
-  .conf.low { color: var(--warn); font-weight: 600; }
-  .actions { display: flex; gap: 6px; flex-wrap: wrap; }
-  .timeline { list-style: none; padding: 0; margin: 0; }
-  .timeline li { display: grid; grid-template-columns: 140px 1fr; gap: 12px; padding: 9px 0; border-bottom: 1px dashed var(--line); }
-  .timeline li:last-child { border-bottom: 0; }
-  .empty { text-align: center; padding: 60px 20px; color: var(--muted); }
-  .note { background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; font-size: 13px; }
-  .result-ok { background: var(--ok-soft); color: var(--ok); padding: 10px 12px; border-radius: 8px; }
-  .result-bad { background: var(--bad-soft); color: var(--bad); padding: 10px 12px; border-radius: 8px; }
-  #toast { position: fixed; bottom: 24px; right: 24px; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 8px; opacity: 0; transition: opacity .2s; max-width: 420px; }
-  #toast.show { opacity: 1; }
-  #toast.err { background: var(--bad); }
-  .vh { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-  button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible, label.btn:focus-within, .clist button:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
-  .clist button { all: unset; display: block; width: 100%; cursor: pointer; }
-  .btn:hover { filter: brightness(0.96); } .btn.primary:hover { filter: brightness(1.1); }
-  .btn[aria-busy="true"] { opacity: .6; cursor: progress; }
-  td.mono, .hash, .late, td:nth-child(4) { font-variant-numeric: tabular-nums; }
-  @media (prefers-reduced-motion: reduce) { #toast { transition: none; } }
-</style>
+<title>Pacta · obrigações contratuais com prova</title>
+<meta name="description" content="Pacta lê o contrato, lista o que cada parte deve entregar e registra na blockchain a impressão digital de cada entrega. Projeto de TCC em Sistemas de Informação (UVA, 2026).">
+<meta name="theme-color" content="#F7F6F2">
+<meta property="og:title" content="Pacta · pactos devem ser cumpridos. E provados.">
+<meta property="og:description" content="IA lê o contrato, uma pessoa revisa, a blockchain guarda a prova. Protótipo e pesquisa de TCC (UVA, 2026).">
+<meta property="og:image" content="https://tcc.agenciastocks.com/img/og.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/img/pacta-simbolo.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/bricolagegrotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/landing.css">
 </head>
 <body>
-<header>
-  <div>
-    <h1>Gestão e Rastreabilidade de Obrigações Contratuais</h1>
-    <div class="sub">Protótipo acadêmico · IA + Blockchain + Smart Contract · TCC UVA 2026.2 · <a href="https://github.com/QuintinoPro/tcc-obrigacoes-contratuais" target="_blank" rel="noopener">código-fonte</a></div>
-  </div>
-  <div class="spacer"></div>
-  <div class="role">
-    <span class="muted">Atuando como</span>
-    <div class="seg" id="roleSeg" role="group" aria-label="Papel do usuário">
-      <button type="button" data-r="CONTRATANTE" class="on" aria-pressed="true">Contratante</button>
-      <button type="button" data-r="CONTRATADA" aria-pressed="false">Contratada</button>
-    </div>
-    <input id="userName" name="usuario" value="ana.contratante" size="14" aria-label="Nome do usuário" autocomplete="off" spellcheck="false">
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="topo">
+  <div class="wrap">
+    <a class="marca" href="/"><img src="/img/pacta-simbolo.svg" alt="" width="30" height="30">pacta</a>
+    <nav aria-label="Seções">
+      <a class="esconde" href="#como-funciona">Como funciona</a>
+      <a class="esconde" href="#resultados">Resultados</a>
+      <a class="esconde" href="#academico">Pesquisa</a>
+      <a class="btn" href="/app/">Testar o protótipo</a>
+    </nav>
   </div>
 </header>
 
-<main>
-  <aside>
-    <div class="card stack">
-      <h2>Contratos</h2>
-      <label class="btn primary" id="uploadLabel" style="display:block;text-align:center">
-        Enviar contrato (PDF)
-        <input type="file" id="upload" class="vh" accept="application/pdf" aria-label="Enviar contrato em PDF">
-      </label>
-      <label class="muted" for="sampleSel" style="font-size:12px">Contrato de exemplo (fictício)</label>
-      <select id="sampleSel" style="width:100%">
-        <option value="patrocinio">Patrocínio de evento (cota Ouro)</option>
-        <option value="audiovisual">Produção audiovisual do evento</option>
-        <option value="trafego">Gestão de tráfego pago</option>
-        <option value="marketing">Marketing digital (C01)</option>
-      </select>
-      <button type="button" class="btn" style="width:100%" id="sampleBtn">Carregar contrato de exemplo</button>
-      <div class="muted" style="font-size:12px">Ambiente de demonstração: use apenas contratos fictícios. Os dados são apagados periodicamente.</div>
-      <ul class="clist" id="clist"></ul>
-    </div>
-    <div class="card stack">
-      <h2>Verificar integridade</h2>
-      <div class="muted" style="font-size:13px">Envie um arquivo para comparar o hash SHA-256 com o registro na blockchain.</div>
-      <input type="file" id="verifyFile" aria-label="Arquivo para verificar integridade">
-      <div id="verifyOut" aria-live="polite"></div>
-    </div>
-    <div class="card">
-      <h2>Blockchain</h2>
-      <div id="chainInfo" class="hash"></div>
-    </div>
-  </aside>
+<main id="conteudo">
 
-  <section id="detail"><div class="card empty">Envie um contrato em PDF ou carregue o exemplo para começar.</div></section>
+<section class="heroi">
+  <div class="wrap">
+    <div>
+      <p class="olho">Obrigações contratuais · IA · blockchain</p>
+      <h1>Pactos devem ser cumpridos. <em>E provados.</em></h1>
+      <p class="chamada">O Pacta lê o contrato, lista o que cada parte deve entregar e registra na blockchain a impressão digital de cada entrega. Se alguém mexer no histórico depois, o sistema percebe.</p>
+      <div class="acoes">
+        <a class="btn cheio" href="/app/">Testar o protótipo</a>
+        <a class="btn" href="#como-funciona">Entender em 4 passos</a>
+      </div>
+    </div>
+
+    <div class="peca" aria-label="Exemplo: uma obrigação lacrada e depois alterada fora do sistema">
+      <div class="clausula">
+        <p class="ref">CONTRATO DE PATROCÍNIO · CLÁUSULA 2.4</p>
+        <p class="txt">A ORGANIZADORA deverá entregar o relatório pós-evento com público, alcance nas redes e fotos da marca até <span class="prazo"><span class="velho">30/09/2027</span><span class="novo" aria-hidden="true">30/11/2027</span></span>.</p>
+        <div class="registro"><span>lacrada em <b>10/03/2027</b></span><span>bloco <b>21</b></span><span>tx <b>7a3c…e91f</b></span></div>
+      </div>
+      <svg class="lacre" viewBox="0 0 188 188" aria-hidden="true">
+        <defs><path id="circulo" d="M94,94 m-68,0 a68,68 0 1,1 136,0 a68,68 0 1,1 -136,0"/></defs>
+        <circle cx="94" cy="94" r="90" fill="#BF4520"/>
+        <circle cx="94" cy="94" r="82" fill="none" stroke="#F7F6F2" stroke-opacity=".5" stroke-width="1"/>
+        <g class="anel"><text font-family="JetBrains Mono, monospace" font-size="11.5" letter-spacing="2.2" fill="#F7F6F2"><textPath href="#circulo">SHA-256 · 9C1F47A0B3E2 · LACRADO · 9C1F47A0B3E2 · LACRADO ·</textPath></text></g>
+        <circle cx="94" cy="94" r="52" fill="none" stroke="#F7F6F2" stroke-width="1.4" stroke-dasharray="3 3.5"/>
+        <rect x="76" y="70" width="9" height="46" rx="4.5" fill="#F7F6F2"/>
+        <circle cx="96" cy="86" r="12.5" fill="none" stroke="#F7F6F2" stroke-width="9"/>
+      </svg>
+      <div class="aviso" role="note"><span class="sinal">!</span><span><b>Prazo alterado fora do sistema.</b> Os dados desta obrigação não conferem mais com o lacre registrado na blockchain.</span></div>
+      <p class="legenda-peca">Cena real do protótipo, com um contrato fictício de patrocínio de evento.</p>
+    </div>
+  </div>
+</section>
+
+<section class="bloco alt" aria-labelledby="t-problema">
+  <div class="wrap">
+    <div class="secao-topo">
+      <h2 id="t-problema">Depois da assinatura, o contrato se perde</h2>
+      <p>As obrigações vão parar em planilhas, e-mails e grupos de WhatsApp. Cada lado guarda a sua versão, e o histórico fica no sistema de quem pode alterá-lo.</p>
+    </div>
+    <div class="cenas">
+      <article class="cena">
+        <p class="tipo">Patrocínio de evento</p>
+        <h3>“A nossa marca entrou no site? Cadê o relatório?”</h3>
+        <p>A organizadora deve marca no site, carrossel, palestra no palco e relatório pós-evento. O patrocinador deve as parcelas, a logomarca e o palestrante. Depois do evento, ninguém sabe ao certo o que foi entregue e quando.</p>
+      </article>
+      <article class="cena">
+        <p class="tipo">Agência de tráfego pago</p>
+        <h3>“A campanha não rodou. De quem é o atraso?”</h3>
+        <p>A agência depende do cliente para ter acesso à conta de anúncios, verba de mídia e aprovação dos criativos. Quando isso falha, a prova do que foi pedido costuma estar perdida numa conversa.</p>
+      </article>
+    </div>
+    <p class="nota-dado">Em média, <b>8,6%</b> do valor de um contrato se perde por falhas de contratação e de gestão contratual (WorldCC e Deloitte, 2023).</p>
+  </div>
+</section>
+
+<section class="bloco" id="como-funciona" aria-labelledby="t-como">
+  <div class="wrap">
+    <div class="secao-topo">
+      <h2 id="t-como">Como funciona</h2>
+      <p>Cada etapa depende da anterior. Nada vira obrigação sem revisão, e nada lacrado muda sem deixar marca.</p>
+    </div>
+    <ol class="passos">
+      <li><span class="n">1</span><h3>Ler</h3><p>Você envia o contrato em PDF. A IA sugere as obrigações de cada parte, com prazo e a prova esperada.</p></li>
+      <li><span class="n">2</span><h3>Revisar</h3><p>Uma pessoa confere, corrige ou descarta cada sugestão. Só o que ela confirma passa a valer.</p></li>
+      <li><span class="n">3</span><h3>Lacrar</h3><p>A impressão digital (hash) do contrato e de cada obrigação vai para um smart contract. O documento em si não sai do servidor.</p></li>
+      <li><span class="n">4</span><h3>Acompanhar</h3><p>Quem deve entrega, com arquivo de prova. A outra parte aprova ou rejeita. Cada passo fica registrado na cadeia.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="bloco alt" aria-labelledby="t-pratica">
+  <div class="wrap pratica">
+    <figure class="tela" style="margin:0">
+      <img src="/img/tela-patrocinio.png" alt="Tela do Pacta com um contrato de patrocínio: marca no site entregue duas vezes, relatório pós-evento com dados alterados fora do sistema e primeira parcela aprovada" width="1445" height="893" loading="lazy">
+    </figure>
+    <div>
+      <h2 id="t-pratica">Na prática</h2>
+      <h3>Contrato de patrocínio, lado a lado</h3>
+      <p>A patrocinadora enviou a logomarca e pagou a primeira parcela. A organizadora aplicou a marca no site, teve a entrega rejeitada por usar o logo antigo e reenviou. Cada arquivo ficou registrado pelo hash.</p>
+      <p>Depois, alguém adiou o prazo do relatório direto no banco de dados. O Pacta recalculou a impressão digital da obrigação, comparou com a da blockchain e acusou a diferença.</p>
+      <a class="btn cheio" href="/app/">Fazer o mesmo teste</a>
+    </div>
+  </div>
+</section>
+
+<section class="bloco" id="resultados" aria-labelledby="t-resultados">
+  <div class="wrap">
+    <div class="secao-topo">
+      <h2 id="t-resultados">O que os testes mostraram</h2>
+      <p>Medido em 11 contratos fictícios anotados à mão, incluindo três modelados em patrocínio de evento, produção audiovisual e tráfego pago. Os limites estão escritos ao lado de cada número.</p>
+    </div>
+    <table class="razao">
+      <thead><tr><th scope="col">Resultado</th><th scope="col">Valor</th><th scope="col">O que isso quer dizer</th></tr></thead>
+      <tbody>
+        <tr><td>Obrigações encontradas pela IA (LLM)</td><td class="valor lacre-txt">63 de 63</td><td>Em três repetições.<span class="det">Mesmo assim, a taxa real de omissão pode chegar a 4,6%. Por isso a revisão humana é obrigatória.</span></td></tr>
+        <tr><td>Obrigações encontradas por regras, em contratos novos</td><td class="valor">11 de 14</td><td>Nenhuma obrigação inventada.<span class="det">Regras bastam para modelos de contrato padronizados; para redação livre, a IA vai melhor.</span></td></tr>
+        <tr><td>Adulterações testadas e detectadas</td><td class="valor lacre-txt">3 de 3</td><td>Documento alterado, prazo mudado no banco, entrega apagada.<span class="det">Vale contra quem controla o banco, não contra quem controla a própria blockchain.</span></td></tr>
+        <tr><td>Instrução maliciosa escondida no contrato</td><td class="valor">ignorada</td><td>Em 3 de 3 tentativas.<span class="det">Um único teste simples; não prova robustez contra ataques elaborados.</span></td></tr>
+        <tr><td>Custo na blockchain por obrigação</td><td class="valor">255 mil gas</td><td>Ciclo completo, do registro à conclusão.<span class="det">Não depende do tamanho dos arquivos: só a impressão digital vai para a cadeia.</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="bloco alt" aria-labelledby="t-para-quem">
+  <div class="wrap">
+    <div class="secao-topo">
+      <h2 id="t-para-quem">Para quem faz sentido</h2>
+      <p>Para quem tem obrigações dos dois lados e precisa provar o que foi entregue.</p>
+    </div>
+    <div class="publicos">
+      <div class="publico"><h3>Agências</h3><p>Acesso, verba e aprovação do cliente viram obrigações com prazo, iguais às entregas da agência.</p></div>
+      <div class="publico"><h3>Eventos</h3><p>Contrapartidas de patrocínio com prova de entrega e relatório no prazo.</p></div>
+      <div class="publico"><h3>Fornecedores</h3><p>Entregas com arquivo registrado e aceite formal de quem contratou.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="bloco" id="academico" aria-labelledby="t-academico">
+  <div class="wrap academico">
+    <div>
+      <h2 id="t-academico">A pesquisa por trás</h2>
+      <p style="color:var(--grafite);margin:0 0 26px">O Pacta é o protótipo de um trabalho de conclusão de curso que avaliou, com dados, onde a IA e a blockchain ajudam no acompanhamento de contratos e onde não ajudam.</p>
+      <dl class="ficha">
+        <dt>Título</dt><dd>Sistema inteligente baseado em Inteligência Artificial e blockchain para gestão e rastreabilidade de obrigações contratuais</dd>
+        <dt>Autor</dt><dd>Lucas Quintino Gomes Araújo</dd>
+        <dt>Orientador</dt><dd>Prof. Claudio José Marques de Souza</dd>
+        <dt>Curso</dt><dd>Sistemas de Informação, Universidade Veiga de Almeida, 2026</dd>
+        <dt>Método</dt><dd>Design Science Research</dd>
+        <dt>Código</dt><dd><a href="https://github.com/QuintinoPro/tcc-obrigacoes-contratuais" rel="noopener">github.com/QuintinoPro/tcc-obrigacoes-contratuais</a></dd>
+      </dl>
+    </div>
+    <figure class="figura" style="margin:0">
+      <img src="/img/arquitetura.svg" alt="Arquitetura: interface web, API, extrator, banco e arquivos fora da cadeia; smart contract ObligationRegistry na cadeia; LLM externo opcional" width="960" height="560" loading="lazy">
+      <figcaption>Documentos e dados ficam fora da cadeia. Na blockchain vão só hashes, estados e eventos.</figcaption>
+    </figure>
+  </div>
+</section>
+
 </main>
-<div id="toast" role="status" aria-live="polite"></div>
 
-<script src="app.js" defer></script>
+<footer class="rodape">
+  <div class="wrap">
+    <a class="marca" href="/" style="font-size:20px"><img src="/img/pacta-simbolo.svg" alt="" width="24" height="24">pacta</a>
+    <span>Protótipo acadêmico. Use apenas contratos fictícios.</span>
+    <span><a href="/app/">Protótipo</a> · <a href="https://github.com/QuintinoPro/tcc-obrigacoes-contratuais" rel="noopener">Código</a></span>
+  </div>
+</footer>
 </body>
 </html>
